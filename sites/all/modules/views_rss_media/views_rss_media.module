@@ -40,6 +40,8 @@ function views_rss_media_help($path, $arg) {
           
 /**
  * Implements hook_views_rss_namespaces().
+ *
+ * Re: https://www.rssboard.org/media-rss#namespace-declaration
  */
 function views_rss_media_views_rss_namespaces() {
   $namespaces['media'] = array(

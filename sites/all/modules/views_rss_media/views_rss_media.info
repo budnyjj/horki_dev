@@ -6,8 +6,8 @@ dependencies[] = views_rss_core
 core = "7.x"
 
 
-; Information added by Drupal.org packaging script on 2020-10-14
+; Information added by Drupal.org packaging script on 2021-07-11
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "views_rss_media"
-datestamp = "1602659140"
+datestamp = "1626017198"
