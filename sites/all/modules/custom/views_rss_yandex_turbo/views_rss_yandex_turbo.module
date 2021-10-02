@@ -203,8 +203,7 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
   foreach ($html->find('[style]') as $e) {
     $e->style = NULL;
   }
-
-  // setup banners
+  // Setup banners
   $top_banner = '<figure data-turbo-ad-id="content-top"></figure>';
   $bottom_banner = '<figure data-turbo-ad-id="content-bottom"></figure>';
   $header = $html->find('header', 0);
@@ -216,7 +215,6 @@ function views_rss_yandex_turbo_preprocess_item_turbo_content(&$variables) {
     $html->outertext = $top_banner . $html->outertext;
   }
   $processed_value = $html->save() . $bottom_banner;
-
   $variables['elements'][0]['key'] = 'turbo:content';
   $variables['elements'][0]['value'] = $processed_value;
 }
