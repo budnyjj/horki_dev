@@ -153,9 +153,11 @@
 .wide-content .node .field-name-body picture,
 .wide-content .node .field-name-body .caption,
 .wide-content .node .field-name-body .embedded-video,
+.wide-content .node .field-name-body .media_embed,
 .wide-content .node .field-name-field-text picture,
 .wide-content .node .field-name-field-text .caption,
-.wide-content .node .field-name-field-text .embedded-video {
+.wide-content .node .field-name-field-text .embedded-video,
+.wide-content .node .field-name-field-text .media_embed {
     width: 1200px !important;
 }
 

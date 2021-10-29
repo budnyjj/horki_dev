@@ -2259,7 +2259,9 @@ ul.tabs li.active a {
 }
 
 .node .field-name-body .embedded-video,
-.node .field-name-field-text .embedded-video {
+.node .field-name-body .media_embed,
+.node .field-name-field-text .embedded-video,
+.node .field-name-field-text .media_embed {
     margin-top: 35px;
     margin-bottom: 35px;
     width: 100%;

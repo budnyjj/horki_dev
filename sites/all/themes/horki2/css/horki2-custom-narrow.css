@@ -804,9 +804,11 @@ html body.admin-menu .stickynav-active {
 .node .field-name-body picture,
 .node .field-name-body .caption,
 .node .field-name-body .embedded-video,
+.node .field-name-body .media_embed,
 .node .field-name-field-text picture,
 .node .field-name-field-text .caption,
-.node .field-name-field-text .embedded-video {
+.node .field-name-field-text .embedded-video,
+.node .field-name-field-text .media_embed {
     width: 894px !important;
 }
 
@@ -865,7 +867,9 @@ html body.admin-menu .stickynav-active {
 }
 
 .node .field-name-body .embedded-video,
-.node .field-name-field-text .embedded-video {
+.node .field-name-body .media_embed,
+.node .field-name-field-text .embedded-video,
+.node .field-name-field-text .media_embed {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: -50px;
