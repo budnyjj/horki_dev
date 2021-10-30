@@ -39,7 +39,8 @@
 <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <!-- Yandex Direct -->
-<script async src="//yastatic.net/pcode/adfox/loader.js" crossorigin="anonymous"></script>
+<script>window.yaContextCb = window.yaContextCb || []</script>
+<script src="//yandex.ru/ads/system/context.js" async></script>
 
 <!-- Google AdSense -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
