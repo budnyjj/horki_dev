@@ -38,7 +38,44 @@
 
 <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<!-- Yandex Direct -->
+<!-- Google services -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVY7K8R99X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-HVY7K8R99X');
+  gtag('config', 'G-HF2Q7NE3TZ');
+  gtag('config', 'UA-17432924-1');
+  gtag('config', 'UA-17432924-4');
+  gtag('config', 'UA-126033838-1');
+</script>
+
+<!-- Google AdSense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7674021519504941",
+    enable_page_level_ads: true
+  });
+</script>
+
+<!-- Yandex.Metrika -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(21451765, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/21451765" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<!-- Yandex.Direct -->
 <script>window.yaContextCb = window.yaContextCb || []</script>
 <script src="//yandex.ru/ads/system/context.js" async></script>
 
