@@ -33,7 +33,7 @@ function horki2_preprocess_node(&$variables) {
     ->condition('jn.nid', $variables['nid'], '=');
   $views_count = intval($query->execute()->fetchField());
   if ($views_count > 0) {  
-    $views_icon = '<img src="/sites/default/files/default_images/view-icon.png" />';
+    $views_icon = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" />';
     $variables['node_views_cntr'] = '<span class="views-count">' . $views_icon . $views_count . '</span>';
   }
 
@@ -43,7 +43,7 @@ function horki2_preprocess_node(&$variables) {
     $comments_count = $variables['comment_count'];
   }
   if ($comments_count > 0) {
-    $comments_icon = '<img src="/sites/default/files/default_images/comment-icon.png" />';	
+    $comments_icon = '<img src="/sites/default/files/default_images/comment-icon.png" width="22" height="14" />';
     $variables['node_comments_cntr'] = '<span class="comments-count">' . $comments_icon . $comments_count . '</span>';
   }
   
