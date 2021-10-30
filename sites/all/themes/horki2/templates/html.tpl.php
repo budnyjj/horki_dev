@@ -42,15 +42,6 @@
 <script>window.yaContextCb = window.yaContextCb || []</script>
 <script src="//yandex.ru/ads/system/context.js" async></script>
 
-<!-- Google AdSense -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-7674021519504941",
-    enable_page_level_ads: true
-  });
-</script>
-
 <!-- SendPulse -->
 <script async charset="UTF-8" src="//web.webpushs.com/js/push/2d160ca9896cdd7e019723312a219d56_1.js"></script>
 
