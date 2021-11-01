@@ -93,6 +93,11 @@ Disallow: /?q=user/logout
 # Custom settings
 #
 
+# Sitemap settings
+Sitemap: https://horki.info/sitemap.xml
+Allow: /sitemap.xml
+Allow: /sitemap.xml?page=*
+
 # RSS pages
 Allow: /news.xml
 Allow: /vk.xml
@@ -134,8 +139,6 @@ Disallow: /*?nsukey=*
 Disallow: /*&nsukey=*
 Disallow: /*?nw=*
 Disallow: /*&nw=*
-Disallow: /*?page=*
-Disallow: /*&page=*
 Disallow: /*?pb_traffic_source=*
 Disallow: /*&pb_traffic_source=*
 Disallow: /*?post=*
@@ -158,9 +161,3 @@ Allow: /davedka.html?qt-davedka=*
 
 # Disallow paths with "nested" html pages
 Disallow: /*.html/*.html
-
-# Disallow PDF file indexation
-Disallow: /*.pdf
-
-# Sitemap settings
-Sitemap: https://horki.info/sitemap.xml
