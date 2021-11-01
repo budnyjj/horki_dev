@@ -132,8 +132,8 @@ function _xmlsitemap_image_handle_imagefield(array $image) {
   if ($caption != NULL) {
     $caption = str_replace(array("\r\n", "\r", "\n"), "", $caption);
     $caption = str_replace("\t", " ", $caption);
-    $min_length = 120;
-    $max_length = 160;
+    $min_length = 100;
+    $max_length = 120;
     if (mb_strlen($caption) < $min_length) {
       $image_attrs["image:caption"] = $caption;
     } else {
