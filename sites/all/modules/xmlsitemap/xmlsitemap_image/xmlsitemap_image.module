@@ -130,23 +130,7 @@ function _xmlsitemap_image_handle_imagefield(array $image) {
     $caption = NULL;
   }
   if ($caption != NULL) {
-    $caption = str_replace(array("\r\n", "\r", "\n"), "", $caption);
-    $caption = str_replace("\t", " ", $caption);
-    $min_length = 100;
-    $max_length = 120;
-    if (mb_strlen($caption) < $min_length) {
-      $image_attrs["image:caption"] = $caption;
-    } else {
-      $pos = mb_strpos($caption, '.', $min_length);
-      if ($pos < $max_length) {
-        $image_attrs["image:caption"] = mb_substr($caption, 0, $pos + 1);
-      } else {
-        $pos = mb_strpos($caption, ' ', $min_length);
-	if ($pos) {
-          $image_attrs["image:caption"] = mb_substr($caption, 0, $pos) . "...";
-        }
-      }
-    }
+    $image_attrs["image:caption"] = _xmlsitemap_image_trim_caption($caption);
   }
   return ["image:image" => $image_attrs];
 }
@@ -237,9 +221,9 @@ function _xmlsitemap_image_handle_textfield(array $image) {
           }
           // And finally check the availability of image URL.
           if (!$skip) {
-            $response = drupal_http_request($matches[ 2 ][ $key ], array('method' => 'HEAD', 'timeout' => 10));
+            $response = drupal_http_request($matches[ 2 ][ $key ]);
             // Only the available images can be in the sitemap.
-            if ($response->code !== 200) {
+            if ($response->code != 200) {
               $skip = TRUE;
             }
           }
@@ -247,11 +231,21 @@ function _xmlsitemap_image_handle_textfield(array $image) {
             continue;
           }
 
+	  $title = $matches[ 3 ][ $key ];
+	  if ($title != NULL) {
+            $title = _xmlsitemap_image_trim_caption($title);
+          }
+
+	  $caption = $matches[ 4 ][ $key ];
+	  if ($caption != NULL) {
+	    $caption = _xmlsitemap_image_trim_caption($caption);
+	  }
+
           $images[] = [
             "image:image" => [
               "image:loc"     => $matches[ 2 ][ $key ],
-              "image:title"   => $matches[ 3 ][ $key ],
-              "image:caption" => $matches[ 4 ][ $key ],
+              "image:title"   => $title,
+              "image:caption" => $caption,
             ],
           ];
         }
@@ -259,6 +253,28 @@ function _xmlsitemap_image_handle_textfield(array $image) {
     }
   }
   return $images;
+}
+
+function _xmlsitemap_image_trim_caption($caption) {
+  $result = str_replace(array("\r\n", "\r", "\n"), "", $caption);
+  $result = str_replace("\t", " ", $result);
+  $min_length = 120;
+  $max_length = 160;
+  if (mb_strlen($result) < $min_length) {
+    return $result;
+  } else {
+    $pos = mb_strpos($result, '.', $min_length);
+    if ($pos < $max_length) {
+      return mb_substr($result, 0, $pos + 1);
+    } else {
+      $pos = mb_strpos($result, ' ', $min_length);
+      if ($pos) {
+        return mb_substr($result, 0, $pos) . "...";
+      } else {
+        return "";
+      }
+    }
+  }
 }
 
 /**
