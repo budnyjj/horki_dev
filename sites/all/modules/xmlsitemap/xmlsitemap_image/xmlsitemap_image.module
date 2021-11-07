@@ -141,7 +141,7 @@ function _xmlsitemap_image_handle_imagefield(array $image) {
       if ($pos < $max_length) {
         $image_attrs["image:caption"] = mb_substr($caption, 0, $pos + 1);
       } else {
-        $pos = mb_strpos($caption, ' ', $max_length);
+        $pos = mb_strpos($caption, ' ', $min_length);
 	if ($pos) {
           $image_attrs["image:caption"] = mb_substr($caption, 0, $pos) . "...";
         }
