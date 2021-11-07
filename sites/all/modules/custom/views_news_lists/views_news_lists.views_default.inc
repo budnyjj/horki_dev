@@ -107,7 +107,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -118,7 +118,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -1439,10 +1439,12 @@ function views_news_lists_views_default_views() {
     t('Афіша'),
     t('Афiша'),
     t('больш навінаў'),
-    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
     t('.'),
     t(' '),
-    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('1'),
+    t('@count'),
+    t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
     t('[field_placement_by_taxonomy] '),
     t('<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
@@ -1611,7 +1613,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -1622,7 +1624,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -2906,10 +2908,12 @@ function views_news_lists_views_default_views() {
     t('Народныя навiны'),
     t('Народныя навіны'),
     t('больш навінаў'),
-    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
     t('.'),
     t(' '),
-    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('1'),
+    t('@count'),
+    t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
     t('[field_default_image]'),
     t('<div class="media-photo">
 [field_pics]
@@ -3125,7 +3129,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -3136,7 +3140,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -4395,10 +4399,12 @@ function views_news_lists_views_default_views() {
     t('наступная ›'),
     t('апошняя »'),
     t('Больш навінаў'),
-    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
     t('.'),
     t(' '),
-    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('1'),
+    t('@count'),
+    t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
     t('<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
@@ -4632,7 +4638,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -4643,7 +4649,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -5936,10 +5942,12 @@ function views_news_lists_views_default_views() {
     t('наступная ›'),
     t('апошняя »'),
     t('Больш навінаў'),
-    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
     t('.'),
     t(' '),
-    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('1'),
+    t('@count'),
+    t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
     t('<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>

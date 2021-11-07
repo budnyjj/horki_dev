@@ -180,7 +180,7 @@ function content_type_ads_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'alt_field_default' => '[node:node-summary]',
+      'alt_field_default' => '[node:node-caption]',
       'alt_field_hide' => 1,
       'alt_field_sync_title' => 0,
       'alt_field_update_on_edit' => 1,

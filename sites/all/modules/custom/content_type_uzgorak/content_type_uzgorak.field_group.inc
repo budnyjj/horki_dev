@@ -21,25 +21,25 @@ function content_type_uzgorak_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Дзеянні',
-    'weight' => '5',
     'children' => array(
       0 => 'group_share',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Дзеянні',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-actions',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '0',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Дзеянні',
     ),
+    'format_type' => 'div',
+    'label' => 'Дзеянні',
+    'weight' => '5',
   );
   $field_groups['group_actions|node|uzgorak|full'] = $field_group;
 
@@ -53,25 +53,25 @@ function content_type_uzgorak_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_actions';
   $field_group->data = array(
-    'label' => 'Падзяліцца',
-    'weight' => '5',
     'children' => array(
       0 => 'field_add_this',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Падзяліцца',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-share',
         'description' => '',
-        'show_label' => '1',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '1',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Падзяліцца',
     ),
+    'format_type' => 'div',
+    'label' => 'Падзяліцца',
+    'weight' => '5',
   );
   $field_groups['group_share|node|uzgorak|full'] = $field_group;
 

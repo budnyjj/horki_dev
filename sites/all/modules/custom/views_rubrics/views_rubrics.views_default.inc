@@ -213,7 +213,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -224,7 +224,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -1536,10 +1536,12 @@ function views_rubrics_views_default_views() {
     t('%1'),
     t('Старонка'),
     t('Больш навінаў'),
-    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
     t('.'),
     t(' '),
-    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('1'),
+    t('@count'),
+    t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
     t('<a href="[path]"><img src="/sites/default/files/default_images/narodnyja.jpg"></a>'),
     t('<div class="media-photo">
 [field_pics]

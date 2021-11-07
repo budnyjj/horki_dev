@@ -225,7 +225,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -236,7 +236,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -399,7 +399,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -410,7 +410,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -566,7 +566,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = '';
@@ -577,7 +577,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -729,7 +729,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -740,7 +740,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -891,7 +891,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -902,7 +902,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -1064,7 +1064,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['recentcount']['label'] = '';
   $handler->display->display_options['fields']['recentcount']['exclude'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]';
+  $handler->display->display_options['fields']['recentcount']['alter']['text'] = '<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]';
   $handler->display->display_options['fields']['recentcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['recentcount']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['recentcount']['separator'] = ' ';
@@ -1075,7 +1075,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['exclude'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]';
+  $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
@@ -1217,15 +1217,17 @@ function views_news_by_regions_views_default_views() {
     t('чарга'),
     t('| [recentcount] <img src="/sites/default/files/default_images/view-icon.png">'),
     t('.'),
+    t('1'),
+    t('@count'),
     t('| [comment_count] <img src="/sites/default/files/default_images/comment-icon.png">'),
     t('<a href="[path]">[field_default_image]</a>'),
     t('<div class="statistics-list">[published_at] [recentcount] [comment_count]</div>'),
     t('Месцы (field_placement_by_taxonomy)'),
     t('<span class="header-title">Горкі</span>
 <span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/58\');?>">Больш навінаў</a></span>'),
-    t('<img src="/sites/default/files/default_images/view-icon.png"> [recentcount]'),
+    t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
     t(' '),
-    t('<img src="/sites/default/files/default_images/comment-icon.png"> [comment_count]'),
+    t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
     t('<div class="media-photo">
 [field_pics]
 </div>

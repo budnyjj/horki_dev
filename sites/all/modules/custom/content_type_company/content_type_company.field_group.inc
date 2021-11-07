@@ -21,25 +21,25 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Дзеянні',
-    'weight' => '14',
     'children' => array(
       0 => 'group_share',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Дзеянні',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-actions',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '0',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Дзеянні',
     ),
+    'format_type' => 'div',
+    'label' => 'Дзеянні',
+    'weight' => '14',
   );
   $field_groups['group_actions|node|company|full'] = $field_group;
 
@@ -53,20 +53,20 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_contacts';
   $field_group->data = array(
-    'label' => 'Адрас',
-    'weight' => '1',
     'children' => array(
       0 => 'field_address',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'description' => '',
         'classes' => 'group-address field-group-tab',
+        'description' => '',
         'required_fields' => 1,
       ),
     ),
+    'format_type' => 'tab',
+    'label' => 'Адрас',
+    'weight' => '1',
   );
   $field_groups['group_address|node|company|form'] = $field_group;
 
@@ -80,8 +80,6 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Кантакты',
-    'weight' => '6',
     'children' => array(
       0 => 'group_address',
       1 => 'group_operation_time',
@@ -89,13 +87,15 @@ function content_type_company_field_group_info() {
       3 => 'group_email',
       4 => 'group_web_site',
     ),
-    'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
         'classes' => 'group-contacts field-group-tabs',
       ),
     ),
+    'format_type' => 'tabs',
+    'label' => 'Кантакты',
+    'weight' => '6',
   );
   $field_groups['group_contacts|node|company|form'] = $field_group;
 
@@ -109,20 +109,20 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_contacts';
   $field_group->data = array(
-    'label' => 'Адрас e-mail',
-    'weight' => '4',
     'children' => array(
       0 => 'field_email',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'description' => '',
         'classes' => 'group-email field-group-tab',
+        'description' => '',
         'required_fields' => 1,
       ),
     ),
+    'format_type' => 'tab',
+    'label' => 'Адрас e-mail',
+    'weight' => '4',
   );
   $field_groups['group_email|node|company|form'] = $field_group;
 
@@ -136,8 +136,6 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Інфармацыя',
-    'weight' => '0',
     'children' => array(
       0 => 'field_company_full_name',
       1 => 'field_tax_number',
@@ -147,20 +145,22 @@ function content_type_company_field_group_info() {
       5 => 'field_email',
       6 => 'field_company_web_site',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Інфармацыя',
+      'formatter' => 'open',
       'instance_settings' => array(
         'classes' => 'group-info field-group-div',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'none',
         'id' => 'node_company_full_group_info',
+        'label_element' => 'h3',
+        'show_label' => '0',
+        'speed' => 'none',
       ),
-      'formatter' => 'open',
+      'label' => 'Інфармацыя',
     ),
+    'format_type' => 'div',
+    'label' => 'Інфармацыя',
+    'weight' => '0',
   );
   $field_groups['group_info|node|company|full'] = $field_group;
 
@@ -174,20 +174,20 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_contacts';
   $field_group->data = array(
-    'label' => 'Час працы',
-    'weight' => '2',
     'children' => array(
       0 => 'field_operation_time',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'description' => '',
         'classes' => 'group-operation-time field-group-tab',
+        'description' => '',
         'required_fields' => 1,
       ),
     ),
+    'format_type' => 'tab',
+    'label' => 'Час працы',
+    'weight' => '2',
   );
   $field_groups['group_operation_time|node|company|form'] = $field_group;
 
@@ -201,20 +201,20 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_contacts';
   $field_group->data = array(
-    'label' => 'Тэлефон',
-    'weight' => '3',
     'children' => array(
       0 => 'field_company_phone',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'description' => '',
         'classes' => 'group-phone field-group-tab',
+        'description' => '',
         'required_fields' => 1,
       ),
     ),
+    'format_type' => 'tab',
+    'label' => 'Тэлефон',
+    'weight' => '3',
   );
   $field_groups['group_phone|node|company|form'] = $field_group;
 
@@ -228,25 +228,25 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_actions';
   $field_group->data = array(
-    'label' => 'Падзяліцца',
-    'weight' => '17',
     'children' => array(
       0 => 'field_add_this',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Падзяліцца',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-share',
         'description' => '',
-        'show_label' => '1',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '1',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Падзяліцца',
     ),
+    'format_type' => 'div',
+    'label' => 'Падзяліцца',
+    'weight' => '17',
   );
   $field_groups['group_share|node|company|full'] = $field_group;
 
@@ -260,20 +260,20 @@ function content_type_company_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_contacts';
   $field_group->data = array(
-    'label' => 'Web-сайт',
-    'weight' => '5',
     'children' => array(
       0 => 'field_company_web_site',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'description' => '',
         'classes' => 'group-web-site field-group-tab',
+        'description' => '',
         'required_fields' => 1,
       ),
     ),
+    'format_type' => 'tab',
+    'label' => 'Web-сайт',
+    'weight' => '5',
   );
   $field_groups['group_web_site|node|company|form'] = $field_group;
 

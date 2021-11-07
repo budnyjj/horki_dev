@@ -65,37 +65,9 @@ function content_type_news_from_readers_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__news_from_readers';
   $strongarm->value = array(
-    'view_modes' => array(
-      'full' => array(
-        'custom_settings' => TRUE,
-      ),
-      'teaser' => array(
-        'custom_settings' => FALSE,
-      ),
-      'rss' => array(
-        'custom_settings' => FALSE,
-      ),
-      'media_gallery_block' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_index' => array(
-        'custom_settings' => FALSE,
-      ),
-      'search_result' => array(
-        'custom_settings' => FALSE,
-      ),
-      'colorbox' => array(
-        'custom_settings' => FALSE,
-      ),
-      'token' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
     'extra_fields' => array(
+      'display' => array(),
       'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
         'metatags' => array(
           'weight' => '11',
         ),
@@ -108,11 +80,39 @@ function content_type_news_from_readers_strongarm() {
         'redirect' => array(
           'weight' => '10',
         ),
+        'title' => array(
+          'weight' => '0',
+        ),
         'xmlsitemap' => array(
           'weight' => '9',
         ),
       ),
-      'display' => array(),
+    ),
+    'view_modes' => array(
+      'colorbox' => array(
+        'custom_settings' => FALSE,
+      ),
+      'full' => array(
+        'custom_settings' => TRUE,
+      ),
+      'media_gallery_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
   );
   $export['field_bundle_settings_node__news_from_readers'] = $strongarm;
@@ -189,8 +189,8 @@ function content_type_news_from_readers_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_news_from_readers';
   $strongarm->value = array(
-    'status' => '1',
     'priority' => '0.5',
+    'status' => '1',
   );
   $export['xmlsitemap_settings_node_news_from_readers'] = $strongarm;
 
@@ -199,8 +199,8 @@ function content_type_news_from_readers_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_places';
   $strongarm->value = array(
-    'status' => '1',
     'priority' => '0.7',
+    'status' => '1',
   );
   $export['xmlsitemap_settings_taxonomy_term_places'] = $strongarm;
 
@@ -209,8 +209,8 @@ function content_type_news_from_readers_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_rubrics';
   $strongarm->value = array(
-    'status' => '1',
     'priority' => '0.7',
+    'status' => '1',
   );
   $export['xmlsitemap_settings_taxonomy_term_rubrics'] = $strongarm;
 

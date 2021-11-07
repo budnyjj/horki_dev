@@ -21,25 +21,25 @@ function content_type_local_problem_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Дзеянні',
-    'weight' => '10',
     'children' => array(
       0 => 'group_share',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Дзеянні',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-actions',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '0',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Дзеянні',
     ),
+    'format_type' => 'div',
+    'label' => 'Дзеянні',
+    'weight' => '10',
   );
   $field_groups['group_actions|node|local_problem|full'] = $field_group;
 
@@ -53,22 +53,22 @@ function content_type_local_problem_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_placement';
   $field_group->data = array(
-    'label' => 'Адрас - апісанне',
-    'weight' => '2',
     'children' => array(
       0 => 'field_address',
       1 => 'field_placement_by_taxonomy',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Адрас - апісанне',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
         'classes' => 'group-address field-group-tab',
         'description' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'closed',
+      'label' => 'Адрас - апісанне',
     ),
+    'format_type' => 'tab',
+    'label' => 'Адрас - апісанне',
+    'weight' => '2',
   );
   $field_groups['group_address|node|local_problem|form'] = $field_group;
 
@@ -82,13 +82,10 @@ function content_type_local_problem_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Месца, дзе знаходзіцца праблема',
-    'weight' => '2',
     'children' => array(
       0 => 'group_problem_map',
       1 => 'group_address',
     ),
-    'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
@@ -96,6 +93,9 @@ function content_type_local_problem_field_group_info() {
         'id' => '',
       ),
     ),
+    'format_type' => 'tabs',
+    'label' => 'Месца, дзе знаходзіцца праблема',
+    'weight' => '2',
   );
   $field_groups['group_placement|node|local_problem|form'] = $field_group;
 
@@ -109,22 +109,22 @@ function content_type_local_problem_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_placement';
   $field_group->data = array(
-    'label' => 'Мапа',
-    'weight' => '1',
     'children' => array(
       0 => 'field_problem_map',
       1 => 'field_this_problem_on_map',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Мапа',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
         'classes' => '',
         'description' => 'Адзначце на ёй месца, дзе знаходзіцца праблема',
+        'required_fields' => 1,
       ),
-      'formatter' => 'closed',
+      'label' => 'Мапа',
     ),
+    'format_type' => 'tab',
+    'label' => 'Мапа',
+    'weight' => '1',
   );
   $field_groups['group_problem_map|node|local_problem|form'] = $field_group;
 
@@ -138,25 +138,25 @@ function content_type_local_problem_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_actions';
   $field_group->data = array(
-    'label' => 'Падзяліцца',
-    'weight' => '13',
     'children' => array(
       0 => 'field_add_this',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Падзяліцца',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-share',
         'description' => '',
-        'show_label' => '1',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '1',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Падзяліцца',
     ),
+    'format_type' => 'div',
+    'label' => 'Падзяліцца',
+    'weight' => '13',
   );
   $field_groups['group_share|node|local_problem|full'] = $field_group;
 

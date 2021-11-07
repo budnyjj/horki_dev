@@ -65,17 +65,37 @@ function content_type_ads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__ads';
   $strongarm->value = array(
+    'extra_fields' => array(
+      'display' => array(),
+      'form' => array(
+        'metatags' => array(
+          'weight' => '11',
+        ),
+        'mollom' => array(
+          'weight' => '12',
+        ),
+        'path' => array(
+          'weight' => '13',
+        ),
+        'redirect' => array(
+          'weight' => '9',
+        ),
+        'title' => array(
+          'weight' => '1',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '10',
+        ),
+      ),
+    ),
     'view_modes' => array(
       'full' => array(
         'custom_settings' => TRUE,
       ),
-      'teaser' => array(
+      'media_gallery_block' => array(
         'custom_settings' => FALSE,
       ),
       'rss' => array(
-        'custom_settings' => FALSE,
-      ),
-      'media_gallery_block' => array(
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
@@ -84,32 +104,12 @@ function content_type_ads_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser' => array(
+        'custom_settings' => FALSE,
+      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
-    ),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '1',
-        ),
-        'path' => array(
-          'weight' => '13',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '10',
-        ),
-        'metatags' => array(
-          'weight' => '11',
-        ),
-        'mollom' => array(
-          'weight' => '12',
-        ),
-        'redirect' => array(
-          'weight' => '9',
-        ),
-      ),
-      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__ads'] = $strongarm;
@@ -193,8 +193,8 @@ function content_type_ads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_ads';
   $strongarm->value = array(
-    'status' => '0',
     'priority' => '0.5',
+    'status' => '0',
   );
   $export['xmlsitemap_settings_node_ads'] = $strongarm;
 
@@ -203,8 +203,8 @@ function content_type_ads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_placement';
   $strongarm->value = array(
-    'status' => '0',
     'priority' => '0.5',
+    'status' => '0',
   );
   $export['xmlsitemap_settings_taxonomy_term_ads_placement'] = $strongarm;
 
@@ -213,8 +213,8 @@ function content_type_ads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_topics';
   $strongarm->value = array(
-    'status' => '0',
     'priority' => '0.5',
+    'status' => '0',
   );
   $export['xmlsitemap_settings_taxonomy_term_ads_topics'] = $strongarm;
 
@@ -223,8 +223,8 @@ function content_type_ads_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_ads_types';
   $strongarm->value = array(
-    'status' => '0',
     'priority' => '0.5',
+    'status' => '0',
   );
   $export['xmlsitemap_settings_taxonomy_term_ads_types'] = $strongarm;
 

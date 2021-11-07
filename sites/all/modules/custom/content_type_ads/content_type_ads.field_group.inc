@@ -21,26 +21,26 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Дзеянні',
-    'weight' => '7',
     'children' => array(
       0 => 'group_share',
       1 => 'group_tags',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Дзеянні',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-actions',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '0',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Дзеянні',
     ),
+    'format_type' => 'div',
+    'label' => 'Дзеянні',
+    'weight' => '7',
   );
   $field_groups['group_actions|node|ads|full'] = $field_group;
 
@@ -54,20 +54,20 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_ads';
   $field_group->data = array(
-    'label' => 'Месца',
-    'weight' => '15',
     'children' => array(
       0 => 'field_ads_placement',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'description' => '',
         'classes' => 'group-ads-placement field-group-tab',
+        'description' => '',
         'required_fields' => 1,
       ),
     ),
+    'format_type' => 'tab',
+    'label' => 'Месца',
+    'weight' => '15',
   );
   $field_groups['group_ads_placement|node|ads|form'] = $field_group;
 
@@ -81,21 +81,21 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_ads';
   $field_group->data = array(
-    'label' => 'Тэма',
-    'weight' => '13',
     'children' => array(
       0 => 'field_ads_topic',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Тэма',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
         'classes' => ' group-ads-topic field-group-tab',
         'description' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'closed',
+      'label' => 'Тэма',
     ),
+    'format_type' => 'tab',
+    'label' => 'Тэма',
+    'weight' => '13',
   );
   $field_groups['group_ads_topic|node|ads|form'] = $field_group;
 
@@ -109,21 +109,21 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_ads';
   $field_group->data = array(
-    'label' => 'Тып',
-    'weight' => '12',
     'children' => array(
       0 => 'field_ads_type',
     ),
-    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Тып',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
         'classes' => ' group-ads-type field-group-tab',
         'description' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'closed',
+      'label' => 'Тып',
     ),
+    'format_type' => 'tab',
+    'label' => 'Тып',
+    'weight' => '12',
   );
   $field_groups['group_ads_type|node|ads|form'] = $field_group;
 
@@ -137,20 +137,20 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Абвестка',
-    'weight' => '3',
     'children' => array(
       0 => 'group_ads_type',
       1 => 'group_ads_topic',
       2 => 'group_ads_placement',
     ),
-    'format_type' => 'tabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
         'classes' => ' group-ads field-group-tabs',
       ),
     ),
+    'format_type' => 'tabs',
+    'label' => 'Абвестка',
+    'weight' => '3',
   );
   $field_groups['group_ads|node|ads|form'] = $field_group;
 
@@ -164,28 +164,28 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Інфармацыя',
-    'weight' => '3',
     'children' => array(
       0 => 'field_user_name',
       1 => 'field_ads_phone',
       2 => 'field_price',
       3 => 'field_email',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Інфармацыя',
+      'formatter' => 'open',
       'instance_settings' => array(
         'classes' => 'group-info field-group-div',
         'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
         'effect' => 'none',
-        'speed' => 'fast',
         'id' => 'node_ads_full_group_info',
+        'label_element' => 'h3',
+        'show_label' => '0',
+        'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Інфармацыя',
     ),
+    'format_type' => 'div',
+    'label' => 'Інфармацыя',
+    'weight' => '3',
   );
   $field_groups['group_info|node|ads|full'] = $field_group;
 
@@ -199,25 +199,25 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_actions';
   $field_group->data = array(
-    'label' => 'Падзяліцца',
-    'weight' => '1',
     'children' => array(
       0 => 'field_add_this',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Падзяліцца',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-share',
         'description' => '',
-        'show_label' => '1',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '1',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Падзяліцца',
     ),
+    'format_type' => 'div',
+    'label' => 'Падзяліцца',
+    'weight' => '1',
   );
   $field_groups['group_share|node|ads|full'] = $field_group;
 
@@ -231,27 +231,27 @@ function content_type_ads_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = 'group_actions';
   $field_group->data = array(
-    'label' => 'Тэгі',
-    'weight' => '3',
     'children' => array(
       0 => 'field_ads_type',
       1 => 'field_ads_topic',
       2 => 'field_ads_placement',
     ),
-    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Тэгі',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'id' => '',
         'classes' => 'group-tags',
         'description' => '',
-        'show_label' => '1',
-        'label_element' => 'h3',
         'effect' => 'none',
+        'id' => '',
+        'label_element' => 'h3',
+        'show_label' => '1',
         'speed' => 'fast',
       ),
-      'formatter' => 'open',
+      'label' => 'Тэгі',
     ),
+    'format_type' => 'div',
+    'label' => 'Тэгі',
+    'weight' => '3',
   );
   $field_groups['group_tags|node|ads|full'] = $field_group;
 

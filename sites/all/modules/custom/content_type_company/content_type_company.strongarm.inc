@@ -16,12 +16,29 @@ function content_type_company_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__company';
   $strongarm->value = array(
+    'extra_fields' => array(
+      'display' => array(),
+      'form' => array(
+        'metatags' => array(
+          'weight' => '13',
+        ),
+        'path' => array(
+          'weight' => '12',
+        ),
+        'redirect' => array(
+          'weight' => '11',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '10',
+        ),
+      ),
+    ),
     'view_modes' => array(
       'full' => array(
         'custom_settings' => TRUE,
-      ),
-      'teaser' => array(
-        'custom_settings' => FALSE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -32,29 +49,12 @@ function content_type_company_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'teaser' => array(
+        'custom_settings' => FALSE,
+      ),
       'token' => array(
         'custom_settings' => FALSE,
       ),
-    ),
-    'extra_fields' => array(
-      'form' => array(
-        'metatags' => array(
-          'weight' => '13',
-        ),
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '12',
-        ),
-        'redirect' => array(
-          'weight' => '11',
-        ),
-        'xmlsitemap' => array(
-          'weight' => '10',
-        ),
-      ),
-      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__company'] = $strongarm;
@@ -125,8 +125,8 @@ function content_type_company_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_node_company';
   $strongarm->value = array(
-    'status' => '1',
     'priority' => '0.5',
+    'status' => '1',
   );
   $export['xmlsitemap_settings_node_company'] = $strongarm;
 
@@ -135,8 +135,8 @@ function content_type_company_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_settings_taxonomy_term_company_catalog';
   $strongarm->value = array(
-    'status' => '1',
     'priority' => '0.7',
+    'status' => '1',
   );
   $export['xmlsitemap_settings_taxonomy_term_company_catalog'] = $strongarm;
 

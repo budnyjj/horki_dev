@@ -58,8 +58,9 @@ function text_formats_ckeditor_profile_defaults() {
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.allowedContent = true;
-config.disableNativeSpellChecker = false;',
+        'js_conf' => 'config.disableNativeSpellChecker = false;
+config.image_prefillDimensions = false;
+',
         'loadPlugins' => array(
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
@@ -109,7 +110,7 @@ config.disableNativeSpellChecker = false;',
     [\'Link\',\'Unlink\'],
     [\'BulletedList\',\'NumberedList\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\'],
-    [\'Image\',\'IMCE\'],
+    [\'Image\',\'IMCE\',\'MediaEmbed\'],
     [\'Table\'],
     [\'Maximize\']
 ]',
@@ -123,7 +124,8 @@ config.disableNativeSpellChecker = false;',
         'auto_lang' => 't',
         'language_direction' => 'default',
         'allowed_content' => 't',
-        'extraAllowedContent' => 'img[data-picture-mapping]',
+        'extraAllowedContent' => 'img[data-picture-mapping];
+script;',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'p',
         'font_format' => 'p;pre;address;h1;h2;h3;h4;h5;h6',
@@ -150,10 +152,13 @@ config.disableNativeSpellChecker = false;',
         'forcePasteAsPlainText' => 't',
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
-        'theme_config_js' => 'f',
-        'js_conf' => 'config.extraPlugins = \'div\';
-config.allowedContent = true;
-config.disableNativeSpellChecker = false;',
+        'disableNativeSpellChecker' => 'f',
+        'config_js' => 'none',
+        'config_js_path' => '',
+        'js_conf' => 'config.disableNativeSpellChecker = false;
+config.extraPlugins = \'div\';
+config.image_prefillDimensions = false;
+',
         'loadPlugins' => array(
           'counter' => array(
             'name' => 'counter',
