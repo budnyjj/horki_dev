@@ -237,9 +237,9 @@ function _xmlsitemap_image_handle_textfield(array $image) {
           }
           // And finally check the availability of image URL.
           if (!$skip) {
-            $file_headers = @get_headers($matches[ 2 ][ $key ]);
+            $response = drupal_http_request($matches[ 2 ][ $key ], array('method' => 'HEAD', 'timeout' => 10));
             // Only the available images can be in the sitemap.
-            if ($file_headers[ 0 ] !== 'HTTP/1.1 200 OK') {
+            if ($response->code !== 200) {
               $skip = TRUE;
             }
           }
