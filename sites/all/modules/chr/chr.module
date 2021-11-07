@@ -294,7 +294,7 @@ function chr_curl_http_request($url, array $options = array()) {
       }
       break;
     default:
-      $result->error = $status_message;
+      $result->error = $result->status_message;
   }
 
   // Lastly, include any cURL specific information.
