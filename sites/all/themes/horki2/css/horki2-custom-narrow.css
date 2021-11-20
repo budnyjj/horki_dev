@@ -319,16 +319,6 @@ html body.admin-menu .stickynav-active {
     font-size: 2.85em;
 }
 
-.page-newshtml #page-title,
-.page-photoshtml #page-title,
-.page-afishahtml #page-title,
-.context-incidentshtml #page-title,
-.context-peoplehtml #page-title,
-.context-guidehtml #page-title,
-.context-antivirushtml #page-title {
-    display: none;
-}
-
 /* content banner */
 .block-block-61 {
     min-height: 120px;
