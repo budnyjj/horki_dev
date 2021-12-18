@@ -135,6 +135,8 @@ Disallow: /*?ggep_is_embeddable
 Disallow: /*&ggep_is_embeddable
 Disallow: /*?lite=*
 Disallow: /*&lite=*
+Disallow: /*?magmadomain=*
+Disallow: /*&magmadomain=*
 Disallow: /*?nsukey=*
 Disallow: /*&nsukey=*
 Disallow: /*?nw=*
