@@ -38,7 +38,7 @@
 
 <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<!-- Google services -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVY7K8R99X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -50,15 +50,6 @@
   gtag('config', 'UA-17432924-1');
   gtag('config', 'UA-17432924-4');
   gtag('config', 'UA-126033838-1');
-</script>
-
-<!-- Google AdSense -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-7674021519504941",
-    enable_page_level_ads: true
-  });
 </script>
 
 <!-- Yandex.Metrika -->
@@ -75,9 +66,18 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/21451765" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
+<!-- Google AdSense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7674021519504941",
+    enable_page_level_ads: true
+  });
+</script>
+
 <!-- Yandex.Direct -->
 <script>window.yaContextCb = window.yaContextCb || []</script>
-<script src="//yandex.ru/ads/system/context.js" async></script>
+<script async src="//yandex.ru/ads/system/context.js"></script>
 
 <!-- SendPulse -->
 <script async charset="UTF-8" src="//web.webpushs.com/js/push/2d160ca9896cdd7e019723312a219d56_1.js"></script>
