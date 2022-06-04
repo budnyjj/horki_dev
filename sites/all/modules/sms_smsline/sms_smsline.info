@@ -1,0 +1,7 @@
+name = SMS Line
+description = Gateway: Configurable module for integration to SMS Line gateway provider
+package = SMS Framework
+core = 7.x
+dependencies[] = sms
+
+

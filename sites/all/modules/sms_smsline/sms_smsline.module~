@@ -1,0 +1,252 @@
+<?php
+/**
+ * @file
+ * SMS Line gateway module for Drupal SMS Framework. Outbound + Inbound
+ *
+ * @package sms
+ * @subpackage sms_smsline
+ */
+
+/**
+ * Implements hook_gateway_info().
+ */
+function sms_smsline_gateway_info() {
+  return array(
+    'smsline' => array(
+      'name' => 'SMS Line',
+      'send' => 'sms_smsline_send',
+      'configure form' => 'sms_smsline_admin_form',
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ * TODO: check this functionality.
+ */
+function sms_smsline_menu() {
+  $items = array();
+  $items['sms/smsline/receiver'] = array(
+    'title' => 'Simple gateway SMS message receiver',
+    'page callback' => 'sms_smsline_receive_message',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Configuration form for gateway module
+ *
+ * @param $configuration
+ *
+ * @return array
+ *   Drupal form array
+ */
+function sms_smsline_admin_form($configuration) {
+  $form['sms_smsline_send'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Sender (outgoing messages)',
+    '#collapsible' => TRUE,
+  );
+  $form['sms_smsline_send']['sms_smsline_user'] = array(
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#title' => t('Username'),
+    '#description' => t('Your username for this gateway account.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_user']) ? $configuration['sms_smsline_user'] : NULL,
+  );
+  $form['sms_smsline_send']['sms_smsline_api_key'] = array(
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#title' => t('API key'),
+    '#description' => t('Your API key for this gateway account.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_api_key']) ? $configuration['sms_smsline_api_key'] : NULL,
+  );
+  $form['sms_smsline_send']['sms_smsline_sender_value'] = array(
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#title' => t('Sender (from) field value'),
+    '#description' => t('The default value for the sender.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_sender_value']) ? $configuration['sms_smsline_sender_value'] : NULL,
+  );
+  $form['sms_smsline_send']['sms_smsline_number_prefix_value'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number (to) prefix value'),
+    '#description' => t('The value to be prefixed to the sender. Eg: country code'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_number_prefix_value']) ? $configuration['sms_smsline_number_prefix_value'] : NULL,
+  );
+
+  // TODO: check these parameters
+  $form['sms_smsline_receive'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Receiver (incoming messages)',
+    '#collapsible' => TRUE,
+  );
+  $form['sms_smsline_receive']['sms_smsline_recv_url'] = array(
+    '#type' => 'item',
+    '#title' => 'Target URL for the message receiver',
+    '#markup' => url('sms/smsline/receiver', array('absolute' => TRUE)),
+  );
+  $form['sms_smsline_receive']['sms_smsline_recv_content_type'] = array(
+    '#type' => 'radios',
+    '#title' => t('Content Encoding'),
+    '#description' => t('For POST Requests Only.'),
+    '#default_value' => isset($configuration['sms_smsline_recv_content_type']) ? $configuration['sms_smsline_recv_content_type'] : NULL,
+    '#options' => array(
+      'plain' => 'Plain',
+      'json' => 'Json',
+    ),
+  );
+  $form['sms_smsline_receive']['sms_smsline_recv_number_field'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Sender (from) field name'),
+    '#description' => t('The argument/field name for the field that holds the sender number. Eg: sender, from.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_recv_number_field']) ? $configuration['sms_smsline_recv_number_field'] : NULL,
+  );
+  $form['sms_smsline_receive']['sms_smsline_recv_gwnumber_field'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Receiver (to) field name'),
+    '#description' => t('Optional. The argument/field name for the field that holds the gateway receiver number. Eg: to, inNumber, receiver.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_recv_gwnumber_field']) ? $configuration['sms_smsline_recv_gwnumber_field'] : NULL,
+  );
+  $form['sms_smsline_receive']['sms_smsline_recv_message_field'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Message field name'),
+    '#description' => t('The argument/field name for the field that holds the message. Eg: message, text, content.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => isset($configuration['sms_smsline_recv_message_field']) ? $configuration['sms_smsline_recv_message_field'] : NULL,
+  );
+
+  return $form;
+}
+
+/**
+ * Send a message
+ *
+ * @param $number
+ *   MSISDN of message recipient. Expected to include the country code prefix.
+ * @param $message
+ *   Message body text.
+ * @param $options
+ *   Options array from SMS Framework.
+ *
+ * @return \stdClass Response array.
+ * Response array.
+ */
+function sms_smsline_send($number, $message, $options) {
+  $gateway = sms_gateways('gateway', 'smsline');
+  $config = $gateway['configuration'];
+
+  if (is_array($options) and array_key_exists('sender', $options)) {
+    $config['sms_smsline_sender_value'] = $options['sender'];
+  }
+
+  $body = array_filter(array(
+    'target' => $config['sms_smsline_sender_value'],
+    'msisdn' => $config['sms_smsline_number_prefix_value'] . $number,
+    'text' => $message,
+  ));
+
+  $headers = array();  
+  $base_url = 'https://api.smsline.by/v3';
+  $method = '/messages/single/sms';
+  $data_string = json_encode($body);
+  $string  = str_replace('/', '', $method).$data_string;
+  $ctx = hash_init('sha256', HASH_HMAC, $config['sms_smsline_api_key']);
+  hash_update($ctx, $string);
+  $hmac = hash_final($ctx);
+  $headers += array('Authorization-User' => $config['sms_smsline_user']);
+  $headers += array('Authorization' => 'Bearer ' . $hmac);
+
+  $headers += array('Content-Type' => 'application/json');
+  $body = json_encode($body);
+  
+  dpm(array(
+    'method' => 'POST',
+    'headers' => $headers,
+    'data' => $body,
+  ));
+  
+  $http_result = drupal_http_request($base_url . $method, array(
+    'method' => 'POST',
+    'headers' => $headers,
+    'data' => $body,
+  ));
+  
+  dpm($http_result);
+
+  // Check for HTTP errors
+  if (property_exists($http_result, 'error') && ($http_result->code <= 200 || $http_result->code >= 299)) {
+    return array(
+      'status' => FALSE,
+      'message' => t('An error occurred during the HTTP request: @error',
+        array('@error' => $http_result->error)),
+    );
+  }
+
+  if (property_exists($http_result, 'data')) {
+    // Test the HTTP return code
+    if ($http_result->code >= 200 && $http_result->code <= 299) {
+      // Prepare a good response array
+      return array(
+        'status' => TRUE,
+        'status_code' => SMS_GW_OK,
+        'gateway_status_code' => $http_result->code,
+        'gateway_status_text' => $http_result->data,
+      );
+    }
+    else {
+      // We got a (possibly) bad response code
+      return array(
+        'status' => FALSE,
+        'status_code' => SMS_GW_ERR_OTHER,
+        'gateway_status_code' => $http_result->code,
+        'gateway_status_text' => $http_result->data,
+      );
+    }
+  }
+}
+
+/**
+ * Receive an SMS message and pass it into the SMS Framework.
+ * TODO: recheck!
+ */
+function sms_simplegateway_receive_message() {
+  $gateway = sms_gateways('gateway', 'simplegateway');
+  $config = $gateway['configuration'];
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($config['sms_simplegateway_recv_content_type'] == 'json') {
+      $data = (array) json_decode(file_get_contents('php://input'));
+    }
+    else {
+      $data = $_POST;
+    }
+  }
+  else {
+    $data = $_GET;
+  }
+  sms_incoming(
+    $data[$config['sms_simplegateway_recv_number_field']],
+    $data[$config['sms_simplegateway_recv_message_field']],
+    array(
+      'gateway_params' => array(),
+      'receiver' => $data[$config['sms_simplegateway_recv_gwnumber_field']],
+    )
+  );
+  drupal_exit();
+}

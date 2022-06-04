@@ -1,0 +1,5 @@
+name = Block Inject
+description = Allows you to inject blocks in the middle of your node
+core = 7.x
+
+dependencies[] = simplehtmldom
