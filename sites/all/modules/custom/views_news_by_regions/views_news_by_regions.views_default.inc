@@ -49,7 +49,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['footer']['area']['label'] = 'Больш навінаў';
   $handler->display->display_options['footer']['area']['content'] = '<a class="bold-text black-text" href="/gorki.html">больш навінаў</a>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
-  /* Relationship: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Relationship: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -163,7 +163,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -334,7 +334,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -508,7 +508,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -675,7 +675,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -837,7 +837,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -1000,7 +1000,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -1036,8 +1036,8 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['block_description'] = 'Навіны Магілёўскай вобласці';
   $handler->display->display_options['block_caching'] = '8';
 
-  /* Display: Беларусь */
-  $handler = $view->new_display('block', 'Беларусь', 'block_5');
+  /* Display: Беларусь і свет */
+  $handler = $view->new_display('block', 'Беларусь і свет', 'block_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Загаловак: Global: Text area */
@@ -1045,7 +1045,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Беларусь';
-  $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Беларусь</span>
+  $handler->display->display_options['header']['area']['content'] = '<span class="header-title">Беларусь і свет</span>
 <span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/78\');?>">Больш навінаў</a></span>';
   $handler->display->display_options['header']['area']['format'] = 'php_code';
   $handler->display->display_options['defaults']['footer'] = FALSE;
@@ -1173,7 +1173,7 @@ function views_news_by_regions_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Filter criterion: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['filters']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -1252,8 +1252,9 @@ function views_news_by_regions_views_default_views() {
     t('<span class="header-title">Магілёўская вобласць</span>
 <span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/62\');?>">Больш навінаў</a></span>'),
     t('Навіны Магілёўскай вобласці'),
+    t('Беларусь і свет'),
     t('Беларусь'),
-    t('<span class="header-title">Беларусь</span>
+    t('<span class="header-title">Беларусь і свет</span>
 <span class="header-more"><a href="<?php print drupal_get_path_alias(\'taxonomy/term/78\');?>">Больш навінаў</a></span>'),
     t('Навіны Беларусі'),
   );

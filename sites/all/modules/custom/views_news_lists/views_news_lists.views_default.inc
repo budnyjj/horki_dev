@@ -74,7 +74,7 @@ function views_news_lists_views_default_views() {
   /* Display: Афіша */
   $handler = $view->new_display('page', 'Афіша', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Афіша';
+  $handler->display->display_options['title'] = 'Куда пойти в свободное время в Горках, Мстиславле и Дрибине?';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['display_description'] = 'Афiша';
@@ -145,7 +145,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['fields']['field_when']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_when']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_when']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месцы */
+  /* Поле: Змест: Месца */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
@@ -244,11 +244,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Афиша Горки, Дрибин и Мстиславль: кино Крыница, выставки, концерты, праздники | [site:name]',
+        'value' => 'Афиша горки инфо: куда пойти в свободное время? | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Афиша: куда пойти и что посмотреть в Горках, Дрибине, Мстиславле? Анонсы мероприятий, расписание киносеансов Крыницы. ',
+        'value' => 'Куда пойти и что посмотреть в Горках, Мстиславле и Дрибине в свободное время? Афиша мероприятий, расписание кино в Крынице, выставки, концерты, спортивные соревнования, сеансы в Ледовой арене и бассейне. ',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -256,7 +256,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'кинотеатр крыница, горки, афиша',
+        'value' => ' кинотеатр Крыница, ДК БГСХА, Ледовая арена, амфитеатр, горецкий музей',
         'default' => '',
       ),
       'author' => array(
@@ -834,6 +834,9 @@ function views_news_lists_views_default_views() {
                 '@type' => '',
                 '@id' => '',
                 'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
                 'priceCurrency' => '',
                 'url' => '',
                 'itemCondition' => '',
@@ -841,6 +844,7 @@ function views_news_lists_views_default_views() {
                 'availabilityStarts' => '',
                 'availabilityEnds' => '',
                 'validFrom' => '',
+                'priceValidUntil' => '',
                 'category' => '',
                 'eligibleRegion' => array(
                   'pivot' => '',
@@ -866,6 +870,9 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               '@id' => '',
               'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
               'priceCurrency' => '',
               'url' => '',
               'itemCondition' => '',
@@ -873,6 +880,7 @@ function views_news_lists_views_default_views() {
               'availabilityStarts' => '',
               'availabilityEnds' => '',
               'validFrom' => '',
+              'priceValidUntil' => '',
               'category' => '',
               'eligibleRegion' => array(
                 'pivot' => '',
@@ -1020,11 +1028,6 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               'latitude' => '',
               'longitude' => '',
-            ),
-            'country' => array(
-              'pivot' => '',
-              '@type' => '',
-              'name' => '',
             ),
           ),
           'email' => '',
@@ -1437,6 +1440,7 @@ function views_news_lists_views_default_views() {
     t('наступная ›'),
     t('апошняя »'),
     t('Афіша'),
+    t('Куда пойти в свободное время в Горках, Мстиславле и Дрибине?'),
     t('Афiша'),
     t('больш навінаў'),
     t('<img src="/sites/default/files/default_images/view-icon.png" width="22" height="14" /> [recentcount]'),
@@ -3096,7 +3100,7 @@ function views_news_lists_views_default_views() {
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Фотаблог';
+  $handler->display->display_options['title'] = 'Фото из Горок, Мстиславля и Дрибина';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -3206,11 +3210,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА | [site:name]',
+        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Фото достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
+        'value' => 'Фоторепортажи и фото новостей, людей, улиц, природы и достопримечательностей на сайте горки инфо из Горок, Мстиславля, Дрибина и БГСХА.',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -3218,7 +3222,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'Горки, город, фото',
+        'value' => 'фоторепортаж Горки, фото Мстиславль, Дрибин фото, бгсха горки фото',
         'default' => '',
       ),
       'author' => array(
@@ -3352,7 +3356,7 @@ function views_news_lists_views_default_views() {
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА',
+        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА',
         'default' => '[view:title]',
       ),
       'og:determiner' => array(
@@ -3360,7 +3364,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:description' => array(
-        'value' => 'Фото достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
+        'value' => 'Фоторепортажи и фото новостей, людей, улиц, природы и достопримечательностей на сайте горки инфо из Горок, Мстиславля, Дрибина и БГСХА.',
         'default' => '',
       ),
       'og:updated_time' => array(
@@ -3587,11 +3591,11 @@ function views_news_lists_views_default_views() {
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Фото из Горок, Дрибина, Мстиславля и БГСХА',
+        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА',
         'default' => '[view:title]',
       ),
       'twitter:description' => array(
-        'value' => 'Фото достопримечательностей, новостей и событий из Горок, Дрибина, Мстиславля, БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов и горецкой сельскохозяйственной академии.',
+        'value' => 'Фоторепортажи и фото новостей, людей, улиц, природы и достопримечательностей на сайте горки инфо из Горок, Мстиславля, Дрибина и БГСХА.',
         'default' => '',
       ),
       'twitter:dnt' => array(
@@ -3796,6 +3800,9 @@ function views_news_lists_views_default_views() {
                 '@type' => '',
                 '@id' => '',
                 'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
                 'priceCurrency' => '',
                 'url' => '',
                 'itemCondition' => '',
@@ -3803,6 +3810,7 @@ function views_news_lists_views_default_views() {
                 'availabilityStarts' => '',
                 'availabilityEnds' => '',
                 'validFrom' => '',
+                'priceValidUntil' => '',
                 'category' => '',
                 'eligibleRegion' => array(
                   'pivot' => '',
@@ -3828,6 +3836,9 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               '@id' => '',
               'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
               'priceCurrency' => '',
               'url' => '',
               'itemCondition' => '',
@@ -3835,6 +3846,7 @@ function views_news_lists_views_default_views() {
               'availabilityStarts' => '',
               'availabilityEnds' => '',
               'validFrom' => '',
+              'priceValidUntil' => '',
               'category' => '',
               'eligibleRegion' => array(
                 'pivot' => '',
@@ -3982,11 +3994,6 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               'latitude' => '',
               'longitude' => '',
-            ),
-            'country' => array(
-              'pivot' => '',
-              '@type' => '',
-              'name' => '',
             ),
           ),
           'email' => '',
@@ -4391,6 +4398,7 @@ function views_news_lists_views_default_views() {
     t('Block'),
     t('чарга'),
     t('Старонка'),
+    t('Фото из Горок, Мстиславля и Дрибина'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
@@ -4606,6 +4614,7 @@ function views_news_lists_views_default_views() {
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Новости с видео';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -4748,11 +4757,11 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Видео про Горки, Дрибин, Мстиславль и БГСХА | [site:name]',
+        'value' => 'Новости с видео на сайте горки инфо | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Видео из Горок, Дрибина, Мстиславля, БГСХА. Відэа з Горак, Дрыбіна, Мсціслава, БДСГА.',
+        'value' => 'Видео, ролики и новости с видео из Горок, Мстиславля, БГСХА, Дрибина и других районов Могилевской области и Беларуси.',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -4760,7 +4769,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'видео, відэа, відэаапытанне, Горки, Горкі',
+        'value' => 'видео',
         'default' => '',
       ),
       'author' => array(
@@ -5338,6 +5347,9 @@ function views_news_lists_views_default_views() {
                 '@type' => '',
                 '@id' => '',
                 'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
                 'priceCurrency' => '',
                 'url' => '',
                 'itemCondition' => '',
@@ -5345,6 +5357,7 @@ function views_news_lists_views_default_views() {
                 'availabilityStarts' => '',
                 'availabilityEnds' => '',
                 'validFrom' => '',
+                'priceValidUntil' => '',
                 'category' => '',
                 'eligibleRegion' => array(
                   'pivot' => '',
@@ -5370,6 +5383,9 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               '@id' => '',
               'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
               'priceCurrency' => '',
               'url' => '',
               'itemCondition' => '',
@@ -5377,6 +5393,7 @@ function views_news_lists_views_default_views() {
               'availabilityStarts' => '',
               'availabilityEnds' => '',
               'validFrom' => '',
+              'priceValidUntil' => '',
               'category' => '',
               'eligibleRegion' => array(
                 'pivot' => '',
@@ -5524,11 +5541,6 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               'latitude' => '',
               'longitude' => '',
-            ),
-            'country' => array(
-              'pivot' => '',
-              '@type' => '',
-              'name' => '',
             ),
           ),
           'email' => '',
@@ -5934,6 +5946,7 @@ function views_news_lists_views_default_views() {
     t('чарга'),
     t('[field_video]'),
     t('Старонка'),
+    t('Новости с видео'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),

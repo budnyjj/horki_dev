@@ -93,7 +93,7 @@ function views_aposhnija_naviny_views_default_views() {
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Апошнія навіны';
+  $handler->display->display_options['title'] = 'Последние новости и фоторепортажи';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'page-media-grid-list';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -118,7 +118,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Relationship: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
@@ -244,11 +244,11 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА | [site:name]',
+        'value' => 'Последние новости и фоторепортажи | [site:name]',
         'default' => '[view:title] | [site:name]',
       ),
       'description' => array(
-        'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
+        'value' => 'Здесь все последние новости, фото и видео, опубликованные на сайте горки инфо. Самое важное из Горок, Дрибина, Мстиславля и других районов Могилевской области, Беларуси и мира.',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -256,7 +256,7 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'keywords' => array(
-        'value' => 'Горки, Дрибин, Мстиславль, БГСХА, Горецкий район, Дрибинский район, Мстиславский район, горецкая академия',
+        'value' => 'Горки, БГСХА, Мстиславль, Дрибин, Горецкий район, Дрибинский район, Мстиславский район, Могилевская область, Беларусь',
         'default' => '',
       ),
       'author' => array(
@@ -390,7 +390,7 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА',
+        'value' => 'Последние новости и фоторепортажи на сайте горки инфо',
         'default' => '[view:title]',
       ),
       'og:determiner' => array(
@@ -398,7 +398,7 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '',
       ),
       'og:description' => array(
-        'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
+        'value' => 'Здесь все последние новости, фото и видео, опубликованные на сайте горки инфо. Только важное из Горок, Дрибина, Мстиславля и других районов Могилевской области, Беларуси и мира.',
         'default' => '',
       ),
       'og:updated_time' => array(
@@ -625,11 +625,11 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Последние новости, фото и видео из Горок, Дрибина, Мстиславля и БГСХА',
+        'value' => 'Последние новости и фоторепортажи на сайте горки инфо',
         'default' => '[view:title]',
       ),
       'twitter:description' => array(
-        'value' => 'На этой странице собраны свежие новости из Горок, Дрибина, Мстиславля и БГСХА, а также из Горецкого, Дрибинского и Мстиславского районов.',
+        'value' => 'Здесь все последние новости, фото и видео, опубликованные на сайте горки инфо. Только важное из Горок, Дрибина, Мстиславля и других районов Могилевской области, Беларуси и мира.',
         'default' => '',
       ),
       'twitter:dnt' => array(
@@ -834,6 +834,9 @@ function views_aposhnija_naviny_views_default_views() {
                 '@type' => '',
                 '@id' => '',
                 'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
                 'priceCurrency' => '',
                 'url' => '',
                 'itemCondition' => '',
@@ -841,6 +844,7 @@ function views_aposhnija_naviny_views_default_views() {
                 'availabilityStarts' => '',
                 'availabilityEnds' => '',
                 'validFrom' => '',
+                'priceValidUntil' => '',
                 'category' => '',
                 'eligibleRegion' => array(
                   'pivot' => '',
@@ -866,6 +870,9 @@ function views_aposhnija_naviny_views_default_views() {
               '@type' => '',
               '@id' => '',
               'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
               'priceCurrency' => '',
               'url' => '',
               'itemCondition' => '',
@@ -873,6 +880,7 @@ function views_aposhnija_naviny_views_default_views() {
               'availabilityStarts' => '',
               'availabilityEnds' => '',
               'validFrom' => '',
+              'priceValidUntil' => '',
               'category' => '',
               'eligibleRegion' => array(
                 'pivot' => '',
@@ -1020,11 +1028,6 @@ function views_aposhnija_naviny_views_default_views() {
               '@type' => '',
               'latitude' => '',
               'longitude' => '',
-            ),
-            'country' => array(
-              'pivot' => '',
-              '@type' => '',
-              'name' => '',
             ),
           ),
           'email' => '',
@@ -1222,6 +1225,90 @@ function views_aposhnija_naviny_views_default_views() {
         ),
       ),
       'schema_organization.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+      ),
+      'schema_video_object.@type' => array(
+        'value' => '',
+      ),
+      'schema_video_object.@id' => array(
+        'value' => '',
+      ),
+      'schema_video_object.name' => array(
+        'value' => '',
+      ),
+      'schema_video_object.description' => array(
+        'value' => '',
+      ),
+      'schema_video_object.uploadDate' => array(
+        'value' => '',
+      ),
+      'schema_video_object.expires' => array(
+        'value' => '',
+      ),
+      'schema_video_object.thumbnailUrl' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+      ),
+      'schema_video_object.contentUrl' => array(
+        'value' => '',
+      ),
+      'schema_video_object.embedUrl' => array(
+        'value' => '',
+      ),
+      'schema_video_object.duration' => array(
+        'value' => '',
+      ),
+      'schema_video_object.interactionCount' => array(
+        'value' => '',
+      ),
+      'schema_video_object.transcript' => array(
+        'value' => '',
+      ),
+      'schema_video_object.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+      ),
+      'schema_video_object.review' => array(
         'value' => array(
           'pivot' => '',
           '@type' => '',
@@ -1609,7 +1696,7 @@ function views_aposhnija_naviny_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Старонка'),
-    t('Апошнія навіны'),
+    t('Последние новости и фоторепортажи'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),

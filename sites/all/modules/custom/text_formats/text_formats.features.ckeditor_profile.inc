@@ -125,7 +125,13 @@ config.image_prefillDimensions = false;
         'language_direction' => 'default',
         'allowed_content' => 't',
         'extraAllowedContent' => 'img[data-picture-mapping];
-script;',
+blockquote(*)[*]{*};
+a[*]{*};
+svg[*];
+g[*];
+path[*];
+script;
+',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'p',
         'font_format' => 'p;pre;address;h1;h2;h3;h4;h5;h6',

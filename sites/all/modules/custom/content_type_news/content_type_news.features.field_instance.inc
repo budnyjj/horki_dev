@@ -50,7 +50,7 @@ function content_type_news_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -116,7 +116,9 @@ function content_type_news_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Экспартаваць можна толькі унікальныя рускамоўныя артыкулы з прысутнасцю тэкста.',
+    'description' => 'Экспартаваць можна толькі унікальныя рускамоўныя артыкулы з прысутнасцю тэкста.
+<br>
+Актуальны спіс патрабаванняў: https://support.google.com/news/publisher-center/answer/6204050',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -133,7 +135,7 @@ function content_type_news_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_export_rss_yandex_google',
-    'label' => 'Экспарт у RSS для Яндэкса ды Google',
+    'label' => 'Экспарт у RSS для Google News',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -146,6 +148,52 @@ function content_type_news_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_export_rss_yandex_zen'.
+  $field_instances['node-news-field_export_rss_yandex_zen'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Обязателен новостной и аналитический характер экспортируемых в Новости материалов. 
+<br>
+В них не должны содержаться сообщения неновостного характера: прогнозы погоды, списки и расписания, сообщения блогов и форумов, анонсы предстоящих событий, реклама, стихи, анекдоты, фельетоны, гороскопы, художественные произведения, сообщения-дайджесты («Главное за день», «Итоги недели», «Олимпиада: главные цифры дня», «Что случилось этой ночью») и т. п.
+<br>
+Актуальны спіс патрабаванняў: https://dzen.ru/help/news/requirements/content.html#content__overall',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_export_rss_yandex_zen',
+    'label' => 'Экспарт у RSS для Яндекс.Новости і Дзен',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 5,
     ),
   );
 
@@ -798,12 +846,20 @@ function content_type_news_field_default_field_instances() {
   t('Напрыклад, Горкі, Дрыбін, БДСГА...');
   t('Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...');
   t('Неабавязковыя тэгі, напрыклад, карупцыя, выбары-2012...');
+  t('Обязателен новостной и аналитический характер экспортируемых в Новости материалов. 
+<br>
+В них не должны содержаться сообщения неновостного характера: прогнозы погоды, списки и расписания, сообщения блогов и форумов, анонсы предстоящих событий, реклама, стихи, анекдоты, фельетоны, гороскопы, художественные произведения, сообщения-дайджесты («Главное за день», «Итоги недели», «Олимпиада: главные цифры дня», «Что случилось этой ночью») и т. п.
+<br>
+Актуальны спіс патрабаванняў: https://dzen.ru/help/news/requirements/content.html#content__overall');
   t('Падзяліцца');
   t('Рубрыкі');
   t('Тэкст');
   t('Фоты да блогу');
-  t('Экспарт у RSS для Яндэкса ды Google');
-  t('Экспартаваць можна толькі унікальныя рускамоўныя артыкулы з прысутнасцю тэкста.');
+  t('Экспарт у RSS для Google News');
+  t('Экспарт у RSS для Яндекс.Новости і Дзен');
+  t('Экспартаваць можна толькі унікальныя рускамоўныя артыкулы з прысутнасцю тэкста.
+<br>
+Актуальны спіс патрабаванняў: https://support.google.com/news/publisher-center/answer/6204050');
 
   return $field_instances;
 }

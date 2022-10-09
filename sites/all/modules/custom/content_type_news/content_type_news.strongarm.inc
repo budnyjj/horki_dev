@@ -69,19 +69,19 @@ function content_type_news_strongarm() {
       'display' => array(),
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
     ),

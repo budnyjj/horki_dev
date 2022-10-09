@@ -82,8 +82,8 @@ function content_type_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'children' => array(
-      0 => 'group_preview',
-      1 => 'group_photos',
+      0 => 'group_photos',
+      1 => 'group_preview',
     ),
     'format_settings' => array(
       'instance_settings' => array(
@@ -276,9 +276,9 @@ function content_type_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'children' => array(
-      0 => 'group_places',
-      1 => 'group_rubrics',
-      2 => 'group_additional',
+      0 => 'group_additional',
+      1 => 'group_places',
+      2 => 'group_rubrics',
     ),
     'format_settings' => array(
       'formatter' => '',

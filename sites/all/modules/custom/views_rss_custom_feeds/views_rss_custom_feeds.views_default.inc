@@ -1087,11 +1087,11 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['value'] = array(
+  /* Filter criterion: Змест: Экспарт у RSS для Яндекс.Новости і Дзен (field_export_rss_yandex_zen) */
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['id'] = 'field_export_rss_yandex_zen_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['table'] = 'field_data_field_export_rss_yandex_zen';
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['field'] = 'field_export_rss_yandex_zen_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['value'] = array(
     1 => '1',
   );
   $handler->display->display_options['path'] = 'yandex.xml';
@@ -1295,13 +1295,15 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
-  $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['value'] = array(
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Змест: Экспарт у RSS для Яндекс.Новости і Дзен (field_export_rss_yandex_zen) */
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['id'] = 'field_export_rss_yandex_zen_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['table'] = 'field_data_field_export_rss_yandex_zen';
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['field'] = 'field_export_rss_yandex_zen_value';
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['value'] = array(
     1 => '1',
   );
+  $handler->display->display_options['filters']['field_export_rss_yandex_zen_value']['group'] = 1;
   /* Filter criterion: Вузел: Published at */
   $handler->display->display_options['filters']['published_at']['id'] = 'published_at';
   $handler->display->display_options['filters']['published_at']['table'] = 'publication_date';
@@ -1309,6 +1311,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['published_at']['operator'] = '>=';
   $handler->display->display_options['filters']['published_at']['value']['value'] = '-5 days';
   $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['published_at']['group'] = 1;
   $handler->display->display_options['path'] = 'zen.xml';
   $handler->display->display_options['sitename_title'] = 0;
   $translatables['rss'] = array(
@@ -1362,7 +1365,7 @@ function views_rss_custom_feeds_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'RSS: Google Discover';
+  $view->human_name = 'RSS: Google News';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -1641,7 +1644,7 @@ function views_rss_custom_feeds_views_default_views() {
     'news' => 'news',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  /* Filter criterion: Змест: Экспарт у RSS для Google News (field_export_rss_yandex_google) */
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
@@ -1879,7 +1882,7 @@ function views_rss_custom_feeds_views_default_views() {
     2 => '2',
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  /* Filter criterion: Змест: Экспарт у RSS для Google News (field_export_rss_yandex_google) */
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
@@ -2119,7 +2122,7 @@ function views_rss_custom_feeds_views_default_views() {
     2 => '2',
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  /* Filter criterion: Змест: Экспарт у RSS для Google News (field_export_rss_yandex_google) */
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
@@ -2352,7 +2355,7 @@ function views_rss_custom_feeds_views_default_views() {
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Змест: Экспарт у RSS для Яндэкса ды Google (field_export_rss_yandex_google) */
+  /* Filter criterion: Змест: Экспарт у RSS для Google News (field_export_rss_yandex_google) */
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['id'] = 'field_export_rss_yandex_google_value';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['table'] = 'field_data_field_export_rss_yandex_google';
   $handler->display->display_options['filters']['field_export_rss_yandex_google_value']['field'] = 'field_export_rss_yandex_google_value';
@@ -2839,7 +2842,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месцы */
+  /* Поле: Змест: Месца */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
@@ -3046,7 +3049,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месцы */
+  /* Поле: Змест: Месца */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
@@ -3259,7 +3262,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месцы */
+  /* Поле: Змест: Месца */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
@@ -3455,7 +3458,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_text']['alter']['preserve_tags'] = '<h1> <h2> <h3> <p> <br> <ul> <ol> <li> <b> <strong> <i> <em> <sup> <sub> <a> <blockquote> <img> <table> <tr> <th> <td> <iframe>';
   $handler->display->display_options['fields']['field_text']['element_label_colon'] = FALSE;
-  /* Поле: Змест: Месцы */
+  /* Поле: Змест: Месца */
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['id'] = 'field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['fields']['field_placement_by_taxonomy']['field'] = 'field_placement_by_taxonomy';
