@@ -6,9 +6,8 @@ dependencies[] = views_rss_core
 core = 7.x
 files[] = views/views_rss_yandex_realty_plugin_style_fields.inc
 
-; Information added by Drupal.org packaging script on 2016-01-15
-version = "7.x-1.2"
+; Information added by Drupal.org packaging script on 2022-07-26
+version = "7.x-1.3"
 core = "7.x"
 project = "views_rss_yandex"
-datestamp = "1452846240"
-
+datestamp = "1658813381"

@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Mail file for the Views RSS: Yandex.Realty module.
+ * Main file for the Views RSS: Yandex.Realty module.
  */
+
+include_once 'views_rss_yandex_realty.field.inc';
 
 /**
  * Implements hook_views_api().
@@ -451,9 +453,12 @@ function views_rss_yandex_realty_views_rss_yandex_realty_offer_elements() {
   }
   $elements += $elements_country;
 
-  foreach ($elements as &$element) {
-    $element['help'] = 'https://yandex.ru/support/webmaster/realty/requirements.xml';
-    $element['preprocess functions'][] = 'views_rss_yandex_realty_preprocess_yandex_realty_offer_element';
+  // Add default help and preprocess function.
+  foreach ($elements as $key => &$element) {
+    $element['help'] = 'https://yandex.ru/support/realty/rules/content-requirements.html';
+    if ($key != 'image') {
+      $element['preprocess functions'][] = 'views_rss_yandex_realty_preprocess_yandex_realty_offer_element';
+    }
   }
 
   return $elements;
@@ -552,9 +557,8 @@ function _views_rss_yandex_realty_value_map($value) {
   if (isset($map[$value])) {
     return $map[$value];
   }
-  else {
-    return $value;
-  }
+
+  return $value;
 }
 
 /**
