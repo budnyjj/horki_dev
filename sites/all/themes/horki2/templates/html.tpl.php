@@ -31,6 +31,7 @@
 <meta name="google-site-verification" content="I50q2z2FdQZMKZ_SPHbi7dyjnjn7FD4wLkfEWkks0ZI" />
 <meta name="google-site-verification" content="mc_80mJ1g2ulo7wFCZyPg9_tfUYANmS7OCbKrLypEKg" />
 <meta name="yandex-verification" content="d4b6a64cdf423497" />
+<meta name="zen-verification" content="BMLd9XI4bgryveU7qS41P9yaswPBYmpERid1asvQVajcXLGNyV1bUab7tcPBY8km" />
 <meta name='wmail-verification' content='88f1db5a9ded957fc2182fc09c649234' />
 <meta property="fb:pages" content="140208249349033" />
 
