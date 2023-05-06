@@ -33,7 +33,12 @@ class context_condition_user extends context_condition {
   }
 
   function execute($account) {
-    $all_roles = user_roles();
+    $result = db_query('SELECT rid, name FROM {role} ORDER BY weight, name');
+    $all_roles = array();
+    foreach ($result as $role) {
+      $all_roles[$role->rid] = $role->name;
+    }
+
     $users_roles = $account->roles;
     foreach ($all_roles as $rid => $role) {
       foreach ($this->get_contexts($role) as $context) {
