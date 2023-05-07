@@ -1,17 +1,6 @@
 #
-# robots.txt
+# Settings for all crawler bots.
 #
-# This file is to prevent the crawling and indexing of certain parts
-# of your site by web crawlers and spiders run by sites like Yahoo!
-# and Google. By telling these "robots" where not to go on your site,
-# you save bandwidth and server resources.
-#
-# This file will be ignored unless it is at the root of your host:
-# Used:    http://example.com/robots.txt
-# Ignored: http://example.com/site/robots.txt
-#
-# For more information about the robots.txt standard, see:
-# http://www.robotstxt.org/robotstxt.html
 
 User-agent: *
 Crawl-delay: 10
@@ -89,9 +78,157 @@ Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 
+# Sitemap settings
+Sitemap: https://horki.info/sitemap.xml
+Allow: /sitemap.xml
+Allow: /sitemap.xml?page=*
+
+# RSS pages
+Allow: /news.xml
+Allow: /vk.xml
+Allow: /facebook.xml
+Allow: /twitter.xml
+Allow: /yandex.xml
+Allow: /zen.xml
+Allow: /discover/news.xml
+Allow: /discover/incidents.xml
+Allow: /discover/people.xml
+Allow: /discover/photos.xml
+Allow: /discover/afisha.xml
+Allow: /turbo/news/last.xml
+Allow: /turbo/news/popular.xml
+Allow: /turbo/afisha.xml
+Allow: /turbo/guide.xml
+
+# Disallow non-clean url access
+Disallow: /node
+Disallow: /node/*
+Disallow: /taxonomy/*
+Disallow: /user/* 
+
+# Disallow hybridauth
+Disallow: /hybridauth
+
+# Disallow some URL variables
+Disallow: /*?baobab_event_id=*
+Disallow: /*&baobab_event_id=*
+Disallow: /*?cshid=*
+Disallow: /*&cshid=*
+Disallow: /*?from=*
+Disallow: /*&from=*
+Disallow: /*?ggep_is_embeddable
+Disallow: /*&ggep_is_embeddable
+Disallow: /*?lite=*
+Disallow: /*&lite=*
+Disallow: /*?magmadomain=*
+Disallow: /*&magmadomain=*
+Disallow: /*?nsukey=*
+Disallow: /*&nsukey=*
+Disallow: /*?nw=*
+Disallow: /*&nw=*
+Disallow: /*?pb_traffic_source=*
+Disallow: /*&pb_traffic_source=*
+Disallow: /*?post=*
+Disallow: /*&post=*
+Disallow: /*?rate=*
+Disallow: /*&rate=*
+Disallow: /*?usg=*
+Disallow: /*&usg=*
+Disallow: /*?utf=*
+Disallow: /*&utf=*
+Disallow: /*?ved=*
+Disallow: /*&ved=*
+Disallow: /*?wprid=*
+Disallow: /*&wprid=*
+Disallow: /*?yhid=*
+Disallow: /*&yhid=*
+
+# Allow qt-davedka URL variable
+Allow: /davedka.html?qt-davedka=*
+
+# Disallow paths with "nested" html pages
+Disallow: /*.html/*.html
+
+
 #
-# Custom settings
+# Copy of settings for the Googlebot.
 #
+
+User-agent: Googlebot
+
+# CSS, JS, Images
+Allow: /misc/*.css$
+Allow: /misc/*.css?
+Allow: /misc/*.js$
+Allow: /misc/*.js?
+Allow: /misc/*.gif
+Allow: /misc/*.jpg
+Allow: /misc/*.jpeg
+Allow: /misc/*.png
+Allow: /modules/*.css$
+Allow: /modules/*.css?
+Allow: /modules/*.js$
+Allow: /modules/*.js?
+Allow: /modules/*.gif
+Allow: /modules/*.jpg
+Allow: /modules/*.jpeg
+Allow: /modules/*.png
+Allow: /profiles/*.css$
+Allow: /profiles/*.css?
+Allow: /profiles/*.js$
+Allow: /profiles/*.js?
+Allow: /profiles/*.gif
+Allow: /profiles/*.jpg
+Allow: /profiles/*.jpeg
+Allow: /profiles/*.png
+Allow: /themes/*.css$
+Allow: /themes/*.css?
+Allow: /themes/*.js$
+Allow: /themes/*.js?
+Allow: /themes/*.gif
+Allow: /themes/*.jpg
+Allow: /themes/*.jpeg
+Allow: /themes/*.png
+# Directories
+Disallow: /includes/
+Disallow: /misc/
+Disallow: /modules/
+Disallow: /profiles/
+Disallow: /scripts/
+Disallow: /themes/
+# Files
+Disallow: /CHANGELOG.txt
+Disallow: /cron.php
+Disallow: /INSTALL.mysql.txt
+Disallow: /INSTALL.pgsql.txt
+Disallow: /INSTALL.sqlite.txt
+Disallow: /install.php
+Disallow: /INSTALL.txt
+Disallow: /LICENSE.txt
+Disallow: /MAINTAINERS.txt
+Disallow: /update.php
+Disallow: /UPGRADE.txt
+Disallow: /xmlrpc.php
+# Paths (clean URLs)
+Disallow: /admin/
+Disallow: /comment/reply/
+Disallow: /filter/tips/
+Disallow: /node/add/
+Disallow: /search/
+Disallow: /user/register/
+Disallow: /user/password/
+Disallow: /user/login/
+Disallow: /user/logout/
+# Paths (no clean URLs)
+Disallow: /?q=admin/
+Disallow: /?q=comment/reply/
+Disallow: /?q=filter/tips/
+Disallow: /?q=node/add/
+Disallow: /?q=search/
+Disallow: /?q=user/password/
+Disallow: /?q=user/register/
+Disallow: /?q=user/login/
+Disallow: /?q=user/logout/
 
 # Sitemap settings
 Sitemap: https://horki.info/sitemap.xml
