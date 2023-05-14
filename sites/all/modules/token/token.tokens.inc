@@ -670,6 +670,7 @@ function token_tokens($type, $tokens, array $data = array(), array $options = ar
           $replacements[$original] = $sanitize ? $title : decode_entities($title);
           break;
         case 'url':
+          $url_options['query'] = drupal_get_query_parameters();
           $replacements[$original] = url($current_path, $url_options);
           break;
         case 'page-number':
@@ -730,9 +731,11 @@ function token_tokens($type, $tokens, array $data = array(), array $options = ar
           $replacements[$original] = $sanitize ? check_plain($alias) : $alias;
           break;
         case 'absolute':
+          $url_options['query'] = drupal_get_query_parameters();
           $replacements[$original] = url($path, $url_options);
           break;
         case 'relative':
+          $url_options['query'] = drupal_get_query_parameters();
           $replacements[$original] = url($path, array('absolute' => FALSE) + $url_options);
           break;
         case 'brief':

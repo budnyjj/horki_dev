@@ -889,9 +889,9 @@ class TokenCurrentPageTestCase extends TokenTestHelper {
     $node = $this->drupalCreateNode(array('title' => 'Node title', 'path' => array('alias' => 'node-alias')));
     $tokens = array(
       '[current-page:title]' => 'Node title',
-      '[current-page:url]' => url("node/{$node->nid}", array('absolute' => TRUE)),
-      '[current-page:url:absolute]' => url("node/{$node->nid}", array('absolute' => TRUE)),
-      '[current-page:url:relative]' => url("node/{$node->nid}", array('absolute' => FALSE)),
+      '[current-page:url]' => url("node/{$node->nid}", array('absolute' => TRUE, 'query' => array('foo' => 'bar'))),
+      '[current-page:url:absolute]' => url("node/{$node->nid}", array('absolute' => TRUE, 'query' => array('foo' => 'bar'))),
+      '[current-page:url:relative]' => url("node/{$node->nid}", array('absolute' => FALSE, 'query' => array('foo' => 'bar'))),
       '[current-page:url:alias]' => 'node-alias',
       '[current-page:url:args:value:0]' => 'node-alias',
       '[current-page:url:args:value:1]' => NULL,
