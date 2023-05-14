@@ -109,6 +109,10 @@ Disallow: /user/*
 # Disallow hybridauth
 Disallow: /hybridauth
 
+# Disallow pages kept for backward compatibility
+Disallow: /navina/
+Disallow: /content/
+
 # Disallow some URL variables
 Disallow: /*?baobab_event_id=*
 Disallow: /*&baobab_event_id=*
@@ -260,6 +264,10 @@ Disallow: /user/*
 
 # Disallow hybridauth
 Disallow: /hybridauth
+
+# Disallow old pages kept for backward compatibility
+Disallow: /navina/
+Disallow: /content/
 
 # Disallow some URL variables
 Disallow: /*?baobab_event_id=*
