@@ -73,7 +73,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -123,7 +123,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -244,8 +244,8 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Последние новости и фоторепортажи | [site:name]',
-        'default' => '[view:title] | [site:name]',
+        'value' => 'Последние новости и фоторепортажи [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
         'value' => 'Здесь все последние новости, фото и видео, опубликованные на сайте горки инфо. Самое важное из Горок, Дрибина, Мстиславля и других районов Могилевской области, Беларуси и мира.',
@@ -261,6 +261,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'author' => array(
         'value' => '',
+        'default' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -302,8 +303,8 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
@@ -311,7 +312,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'shortlink' => array(
         'value' => '',
-        'default' => '[current-page:url:unaliased]',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -368,6 +369,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'google' => array(
         'value' => '',
+        'default' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -386,12 +388,12 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Последние новости и фоторепортажи на сайте горки инфо',
-        'default' => '[view:title]',
+        'value' => 'Последние новости и фоторепортажи на сайте горки инфо [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -423,6 +425,7 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'og:image:alt' => array(
         'value' => '',
+        'default' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -621,12 +624,12 @@ function views_aposhnija_naviny_views_default_views() {
         'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Последние новости и фоторепортажи на сайте горки инфо',
-        'default' => '[view:title]',
+        'value' => 'Последние новости и фоторепортажи на сайте горки инфо [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => 'Здесь все последние новости, фото и видео, опубликованные на сайте горки инфо. Только важное из Горок, Дрибина, Мстиславля и других районов Могилевской области, Беларуси и мира.',
@@ -746,15 +749,19 @@ function views_aposhnija_naviny_views_default_views() {
       ),
       'schema_article.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.headline' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.author' => array(
         'value' => array(
@@ -773,6 +780,7 @@ function views_aposhnija_naviny_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.publisher' => array(
         'value' => array(
@@ -790,12 +798,15 @@ function views_aposhnija_naviny_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.datePublished' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.dateModified' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.image' => array(
         'value' => array(
@@ -806,9 +817,11 @@ function views_aposhnija_naviny_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_article.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.hasPart' => array(
         'value' => array(
@@ -898,9 +911,11 @@ function views_aposhnija_naviny_views_default_views() {
           'isAccessibleForFree' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.isAccessibleForFree' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.speakable' => array(
         'value' => array(
@@ -908,9 +923,11 @@ function views_aposhnija_naviny_views_default_views() {
           'xpath' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.about' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.aggregateRating' => array(
         'value' => array(
@@ -921,6 +938,7 @@ function views_aposhnija_naviny_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_article.review' => array(
         'value' => array(
@@ -953,30 +971,39 @@ function views_aposhnija_naviny_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_item_list.@type' => array(
         'value' => 'ItemList',
+        'default' => '',
       ),
       'schema_item_list.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_item_list.itemListElement' => array(
         'value' => 'aposhnija_naviny:page',
+        'default' => '',
       ),
       'schema_item_list.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.additionalType' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.address' => array(
         'value' => array(
@@ -988,6 +1015,7 @@ function views_aposhnija_naviny_views_default_views() {
           'postalCode' => '',
           'addressCountry' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.geo' => array(
         'value' => array(
@@ -996,9 +1024,11 @@ function views_aposhnija_naviny_views_default_views() {
           'latitude' => '',
           'longitude' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.telephone' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.contactPoint' => array(
         'value' => array(
@@ -1034,15 +1064,19 @@ function views_aposhnija_naviny_views_default_views() {
           'faxnumber' => '',
           'productSupported' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.brand' => array(
         'value' => array(
@@ -1061,12 +1095,15 @@ function views_aposhnija_naviny_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.acceptsReservations' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.menu' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.openingHoursSpecification' => array(
         'value' => array(
@@ -1078,6 +1115,7 @@ function views_aposhnija_naviny_views_default_views() {
           'validFrom' => '',
           'validThrough' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.image' => array(
         'value' => array(
@@ -1088,6 +1126,7 @@ function views_aposhnija_naviny_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.logo' => array(
         'value' => array(
@@ -1097,6 +1136,7 @@ function views_aposhnija_naviny_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.potentialAction' => array(
         'value' => array(
@@ -1144,9 +1184,11 @@ function views_aposhnija_naviny_views_default_views() {
             'url' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.priceRange' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.memberOf' => array(
         'value' => array(
@@ -1203,6 +1245,7 @@ function views_aposhnija_naviny_views_default_views() {
           'url' => '',
           'sameAs' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.aggregateRating' => array(
         'value' => array(
@@ -1213,6 +1256,7 @@ function views_aposhnija_naviny_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.starRating' => array(
         'value' => array(
@@ -1223,6 +1267,7 @@ function views_aposhnija_naviny_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.review' => array(
         'value' => array(
@@ -1255,24 +1300,31 @@ function views_aposhnija_naviny_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_video_object.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.uploadDate' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.expires' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.thumbnailUrl' => array(
         'value' => array(
@@ -1282,21 +1334,27 @@ function views_aposhnija_naviny_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.contentUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.embedUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.duration' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.interactionCount' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.transcript' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.aggregateRating' => array(
         'value' => array(
@@ -1307,6 +1365,7 @@ function views_aposhnija_naviny_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.review' => array(
         'value' => array(
@@ -1339,21 +1398,27 @@ function views_aposhnija_naviny_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.publisher' => array(
         'value' => array(
@@ -1372,6 +1437,7 @@ function views_aposhnija_naviny_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.potentialAction' => array(
         'value' => array(
@@ -1400,20 +1466,24 @@ function views_aposhnija_naviny_views_default_views() {
           ),
           '@type' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.inLanguage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.translationOfWork' => array(
         'value' => array(
           '@id' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.workTranslation' => array(
         'value' => array(
           'pivot' => '',
           '@id' => '',
         ),
+        'default' => '',
       ),
     ),
   );
@@ -1457,7 +1527,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<div class="button-red"><a href="/contact.html">Дадаць навіну</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -1494,7 +1564,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1510,7 +1580,7 @@ function views_aposhnija_naviny_views_default_views() {
     'news' => 'news',
     'news_from_readers' => 'news_from_readers',
   );
-  /* Filter criterion: Nodequeue: In queue */
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -1659,7 +1729,7 @@ function views_aposhnija_naviny_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';

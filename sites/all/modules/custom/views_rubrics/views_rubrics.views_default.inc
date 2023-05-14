@@ -44,11 +44,11 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Relationship: Змест: Месцы (field_placement_by_taxonomy) */
+  /* Relationship: Змест: Месца (field_placement_by_taxonomy) */
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['id'] = 'field_placement_by_taxonomy_tid';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['table'] = 'field_data_field_placement_by_taxonomy';
   $handler->display->display_options['relationships']['field_placement_by_taxonomy_tid']['field'] = 'field_placement_by_taxonomy_tid';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -199,7 +199,7 @@ function views_rubrics_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -341,7 +341,7 @@ function views_rubrics_views_default_views() {
     'und' => array(
       'title' => array(
         'value' => '',
-        'default' => '[view:title] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
         'value' => '',
@@ -357,6 +357,7 @@ function views_rubrics_views_default_views() {
       ),
       'author' => array(
         'value' => '',
+        'default' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -398,16 +399,16 @@ function views_rubrics_views_default_views() {
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
+        'value' => '',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -464,6 +465,7 @@ function views_rubrics_views_default_views() {
       ),
       'google' => array(
         'value' => '',
+        'default' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -482,12 +484,12 @@ function views_rubrics_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => '[view:title]',
-        'default' => '[view:title]',
+        'value' => '',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -519,6 +521,7 @@ function views_rubrics_views_default_views() {
       ),
       'og:image:alt' => array(
         'value' => '',
+        'default' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -717,12 +720,12 @@ function views_rubrics_views_default_views() {
         'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => '[view:title]',
-        'default' => '[view:title]',
+        'value' => '',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => '',
@@ -842,15 +845,19 @@ function views_rubrics_views_default_views() {
       ),
       'schema_article.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.headline' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.author' => array(
         'value' => array(
@@ -869,6 +876,7 @@ function views_rubrics_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.publisher' => array(
         'value' => array(
@@ -886,12 +894,15 @@ function views_rubrics_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.datePublished' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.dateModified' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.image' => array(
         'value' => array(
@@ -902,9 +913,11 @@ function views_rubrics_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_article.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.hasPart' => array(
         'value' => array(
@@ -930,6 +943,9 @@ function views_rubrics_views_default_views() {
                 '@type' => '',
                 '@id' => '',
                 'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
                 'priceCurrency' => '',
                 'url' => '',
                 'itemCondition' => '',
@@ -937,6 +953,7 @@ function views_rubrics_views_default_views() {
                 'availabilityStarts' => '',
                 'availabilityEnds' => '',
                 'validFrom' => '',
+                'priceValidUntil' => '',
                 'category' => '',
                 'eligibleRegion' => array(
                   'pivot' => '',
@@ -962,6 +979,9 @@ function views_rubrics_views_default_views() {
               '@type' => '',
               '@id' => '',
               'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
               'priceCurrency' => '',
               'url' => '',
               'itemCondition' => '',
@@ -969,6 +989,7 @@ function views_rubrics_views_default_views() {
               'availabilityStarts' => '',
               'availabilityEnds' => '',
               'validFrom' => '',
+              'priceValidUntil' => '',
               'category' => '',
               'eligibleRegion' => array(
                 'pivot' => '',
@@ -986,9 +1007,11 @@ function views_rubrics_views_default_views() {
           'isAccessibleForFree' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.isAccessibleForFree' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.speakable' => array(
         'value' => array(
@@ -996,9 +1019,11 @@ function views_rubrics_views_default_views() {
           'xpath' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.about' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.aggregateRating' => array(
         'value' => array(
@@ -1009,6 +1034,7 @@ function views_rubrics_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_article.review' => array(
         'value' => array(
@@ -1041,30 +1067,39 @@ function views_rubrics_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_item_list.@type' => array(
         'value' => 'ItemList',
+        'default' => '',
       ),
       'schema_item_list.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_item_list.itemListElement' => array(
         'value' => 'rubrics:page:[view:url:unaliased:args:last]',
+        'default' => '',
       ),
       'schema_item_list.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.additionalType' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.address' => array(
         'value' => array(
@@ -1076,6 +1111,7 @@ function views_rubrics_views_default_views() {
           'postalCode' => '',
           'addressCountry' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.geo' => array(
         'value' => array(
@@ -1084,9 +1120,11 @@ function views_rubrics_views_default_views() {
           'latitude' => '',
           'longitude' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.telephone' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.contactPoint' => array(
         'value' => array(
@@ -1117,25 +1155,24 @@ function views_rubrics_views_default_views() {
               'latitude' => '',
               'longitude' => '',
             ),
-            'country' => array(
-              'pivot' => '',
-              '@type' => '',
-              'name' => '',
-            ),
           ),
           'email' => '',
           'faxnumber' => '',
           'productSupported' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.brand' => array(
         'value' => array(
@@ -1154,12 +1191,15 @@ function views_rubrics_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.acceptsReservations' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.menu' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.openingHoursSpecification' => array(
         'value' => array(
@@ -1171,6 +1211,7 @@ function views_rubrics_views_default_views() {
           'validFrom' => '',
           'validThrough' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.image' => array(
         'value' => array(
@@ -1181,6 +1222,7 @@ function views_rubrics_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.logo' => array(
         'value' => array(
@@ -1190,6 +1232,7 @@ function views_rubrics_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.potentialAction' => array(
         'value' => array(
@@ -1237,9 +1280,11 @@ function views_rubrics_views_default_views() {
             'url' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.priceRange' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.memberOf' => array(
         'value' => array(
@@ -1296,6 +1341,7 @@ function views_rubrics_views_default_views() {
           'url' => '',
           'sameAs' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.aggregateRating' => array(
         'value' => array(
@@ -1306,6 +1352,7 @@ function views_rubrics_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.starRating' => array(
         'value' => array(
@@ -1316,6 +1363,7 @@ function views_rubrics_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.review' => array(
         'value' => array(
@@ -1348,24 +1396,31 @@ function views_rubrics_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_video_object.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.uploadDate' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.expires' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.thumbnailUrl' => array(
         'value' => array(
@@ -1375,21 +1430,27 @@ function views_rubrics_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.contentUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.embedUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.duration' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.interactionCount' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.transcript' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.aggregateRating' => array(
         'value' => array(
@@ -1400,6 +1461,7 @@ function views_rubrics_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.review' => array(
         'value' => array(
@@ -1432,21 +1494,27 @@ function views_rubrics_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.publisher' => array(
         'value' => array(
@@ -1465,6 +1533,7 @@ function views_rubrics_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.potentialAction' => array(
         'value' => array(
@@ -1493,20 +1562,24 @@ function views_rubrics_views_default_views() {
           ),
           '@type' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.inLanguage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.translationOfWork' => array(
         'value' => array(
           '@id' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.workTranslation' => array(
         'value' => array(
           'pivot' => '',
           '@id' => '',
         ),
+        'default' => '',
       ),
     ),
   );

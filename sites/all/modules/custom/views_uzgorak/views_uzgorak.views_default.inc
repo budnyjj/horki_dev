@@ -82,7 +82,7 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -233,11 +233,11 @@ function views_uzgorak_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Архив газеты "УзГорак" в pdf | [site:name]',
-        'default' => '[view:title] | [site:name]',
+        'value' => 'Архив газеты "УзГорак" в pdf [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
-        'value' => 'Номера областной газеты Узгорак за 2009-2015 годы в формате pdf – скачать или читать онлайн.',
+        'value' => 'Номера областной газеты Узгорак за 2009-2017 годы в формате pdf – скачать или читать онлайн.',
         'default' => '[view:description]',
       ),
       'abstract' => array(
@@ -246,6 +246,10 @@ function views_uzgorak_views_default_views() {
       ),
       'keywords' => array(
         'value' => 'Узгорак, газета Узгорак, читать Узгорак, все номера газеты Узгорак',
+        'default' => '',
+      ),
+      'author' => array(
+        'value' => '',
         'default' => '',
       ),
       'robots' => array(
@@ -285,19 +289,19 @@ function views_uzgorak_views_default_views() {
       ),
       'image_src' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
+        'value' => '',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -313,7 +317,7 @@ function views_uzgorak_views_default_views() {
       ),
       'content-language' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'ru',
       ),
       'geo.position' => array(
         'value' => '',
@@ -352,13 +356,17 @@ function views_uzgorak_views_default_views() {
         'value' => '',
         'default' => '',
       ),
+      'google' => array(
+        'value' => '',
+        'default' => '',
+      ),
       'fb:admins' => array(
         'value' => '',
         'default' => '',
       ),
       'fb:app_id' => array(
         'value' => '',
-        'default' => '',
+        'default' => '1404750383092736',
       ),
       'fb:pages' => array(
         'value' => '',
@@ -369,12 +377,12 @@ function views_uzgorak_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Архив газеты "УзГорак" в pdf ',
-        'default' => '[view:title]',
+        'value' => 'Архив газеты "УзГорак" в pdf [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -394,7 +402,7 @@ function views_uzgorak_views_default_views() {
       ),
       'og:image' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'og:image:url' => array(
         'value' => '',
@@ -404,17 +412,21 @@ function views_uzgorak_views_default_views() {
         'value' => '',
         'default' => '',
       ),
-      'og:image:type' => array(
+      'og:image:alt' => array(
         'value' => '',
         'default' => '',
+      ),
+      'og:image:type' => array(
+        'value' => '',
+        'default' => 'image/png',
       ),
       'og:image:width' => array(
         'value' => '',
-        'default' => '',
+        'default' => '968',
       ),
       'og:image:height' => array(
         'value' => '',
-        'default' => '',
+        'default' => '504',
       ),
       'og:latitude' => array(
         'value' => '',
@@ -590,23 +602,23 @@ function views_uzgorak_views_default_views() {
       ),
       'twitter:card' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'summary_large_image',
       ),
       'twitter:creator' => array(
         'value' => '',
-        'default' => '',
+        'default' => '@horki_info',
       ),
       'twitter:creator:id' => array(
         'value' => '',
-        'default' => '',
+        'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Архив газеты "УзГорак" в pdf ',
-        'default' => '[view:title]',
+        'value' => 'Архив газеты "УзГорак" в pdf [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => 'Номера областной газеты Узгорак за 2009-2015 годы в формате pdf – скачать или читать онлайн.',
@@ -618,19 +630,19 @@ function views_uzgorak_views_default_views() {
       ),
       'twitter:image' => array(
         'value' => '',
-        'default' => '',
+        'default' => 'sites/default/files/social_preview/default.png',
       ),
       'twitter:image:width' => array(
         'value' => '',
-        'default' => '',
+        'default' => '968',
       ),
       'twitter:image:height' => array(
         'value' => '',
-        'default' => '',
+        'default' => '504',
       ),
       'twitter:image:alt' => array(
         'value' => '',
-        'default' => '',
+        'default' => '[current-page:title]',
       ),
       'twitter:image0' => array(
         'value' => '',
@@ -722,6 +734,744 @@ function views_uzgorak_views_default_views() {
       ),
       'twitter:data2' => array(
         'value' => '',
+        'default' => '',
+      ),
+      'schema_article.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.headline' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.author' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_article.publisher' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_article.datePublished' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.dateModified' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.mainEntityOfPage' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.hasPart' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'timeRequired' => '',
+          'potentialAction' => array(
+            'actionType' => '',
+            'pivot' => '',
+            'ConsumeAction' => array(
+              '@type' => '',
+              'target' => array(
+                'pivot' => '',
+                '@type' => '',
+                'urlTemplate' => '',
+                'actionPlatform' => '',
+                'inLanguage' => '',
+              ),
+              'expectsAcceptanceOf' => array(
+                'pivot' => '',
+                '@type' => '',
+                '@id' => '',
+                'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
+                'priceCurrency' => '',
+                'url' => '',
+                'itemCondition' => '',
+                'availability' => '',
+                'availabilityStarts' => '',
+                'availabilityEnds' => '',
+                'validFrom' => '',
+                'priceValidUntil' => '',
+                'category' => '',
+                'eligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+                'ineligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+              ),
+            ),
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'expectsAcceptanceOf' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
+              'priceCurrency' => '',
+              'url' => '',
+              'itemCondition' => '',
+              'availability' => '',
+              'availabilityStarts' => '',
+              'availabilityEnds' => '',
+              'validFrom' => '',
+              'priceValidUntil' => '',
+              'category' => '',
+              'eligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+              'ineligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+            ),
+            '@type' => '',
+          ),
+          'isAccessibleForFree' => '',
+          'cssSelector' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.isAccessibleForFree' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.speakable' => array(
+        'value' => array(
+          '@type' => '',
+          'xpath' => '',
+          'cssSelector' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.about' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_item_list.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_item_list.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_item_list.itemListElement' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_item_list.mainEntityOfPage' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.additionalType' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.address' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'streetAddress' => '',
+          'addressLocality' => '',
+          'addressRegion' => '',
+          'postalCode' => '',
+          'addressCountry' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.geo' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'latitude' => '',
+          'longitude' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.telephone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.contactPoint' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'telephone' => '',
+          'url' => '',
+          'availableLanguage' => '',
+          'contactType' => '',
+          'contactOption' => '',
+          'areaServed' => array(
+            'pivot' => '',
+            '@type' => '',
+            'name' => '',
+            'url' => '',
+            'address' => array(
+              'pivot' => '',
+              '@type' => '',
+              'streetAddress' => '',
+              'addressLocality' => '',
+              'addressRegion' => '',
+              'postalCode' => '',
+              'addressCountry' => '',
+            ),
+            'geo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'latitude' => '',
+              'longitude' => '',
+            ),
+          ),
+          'email' => '',
+          'faxnumber' => '',
+          'productSupported' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.sameAs' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.brand' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_organization.acceptsReservations' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.menu' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.openingHoursSpecification' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'dayOfWeek' => '',
+          'opens' => '',
+          'closes' => '',
+          'validFrom' => '',
+          'validThrough' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.logo' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'TradeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'OrganizeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'result' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'name' => '',
+              'url' => '',
+            ),
+          ),
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+          'result' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_organization.priceRange' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.memberOf' => array(
+        'value' => array(
+          '@type' => '',
+          'name' => '',
+          'programName' => '',
+          'alternateName' => '',
+          'hostingOrganization' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'member' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'membershipNumber' => '',
+          'identifier' => '',
+          'additionalType' => '',
+          'description' => '',
+          'disambiguatingDescription' => '',
+          'image' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+          'mainEntityOfPage' => '',
+          'url' => '',
+          'sameAs' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.starRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_video_object.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.uploadDate' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.thumbnailUrl' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_video_object.contentUrl' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.embedUrl' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.interactionCount' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.transcript' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_video_object.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.sameAs' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.publisher' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'pivot' => '',
+          'SearchAction' => array(
+            '@type' => '',
+            'query' => '',
+            'query-input' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'query' => '',
+          'query-input' => '',
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.inLanguage' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.translationOfWork' => array(
+        'value' => array(
+          '@id' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.workTranslation' => array(
+        'value' => array(
+          'pivot' => '',
+          '@id' => '',
+        ),
         'default' => '',
       ),
     ),

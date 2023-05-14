@@ -244,8 +244,8 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Афиша горки инфо: куда пойти в свободное время? | [site:name]',
-        'default' => '[view:title] | [site:name]',
+        'value' => 'Афиша горки инфо: куда пойти в свободное время? [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
         'value' => 'Куда пойти и что посмотреть в Горках, Мстиславле и Дрибине в свободное время? Афиша мероприятий, расписание кино в Крынице, выставки, концерты, спортивные соревнования, сеансы в Ледовой арене и бассейне. ',
@@ -261,6 +261,7 @@ function views_news_lists_views_default_views() {
       ),
       'author' => array(
         'value' => '',
+        'default' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -302,8 +303,8 @@ function views_news_lists_views_default_views() {
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
@@ -311,7 +312,7 @@ function views_news_lists_views_default_views() {
       ),
       'shortlink' => array(
         'value' => '',
-        'default' => '[current-page:url:unaliased]',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -368,6 +369,7 @@ function views_news_lists_views_default_views() {
       ),
       'google' => array(
         'value' => '',
+        'default' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -386,12 +388,12 @@ function views_news_lists_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Афиша Горки, Дрибин и Мстиславль: кино Крыница, выставки, концерты, праздники',
-        'default' => '[view:title]',
+        'value' => 'Афиша Горки, Дрибин и Мстиславль: кино Крыница, выставки, концерты, праздники [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -423,6 +425,7 @@ function views_news_lists_views_default_views() {
       ),
       'og:image:alt' => array(
         'value' => '',
+        'default' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -621,12 +624,12 @@ function views_news_lists_views_default_views() {
         'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Афиша Горки, Дрибин и Мстиславль: кино Крыница, выставки, концерты, праздники',
-        'default' => '[view:title]',
+        'value' => 'Афиша Горки, Дрибин и Мстиславль: кино Крыница, выставки, концерты, праздники [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => 'Афиша: куда пойти и что посмотреть в Горках, Дрибине, Мстиславле? Анонсы мероприятий, расписание киносеансов Крыницы. ',
@@ -746,15 +749,19 @@ function views_news_lists_views_default_views() {
       ),
       'schema_article.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.headline' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.author' => array(
         'value' => array(
@@ -773,6 +780,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.publisher' => array(
         'value' => array(
@@ -790,12 +798,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.datePublished' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.dateModified' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.image' => array(
         'value' => array(
@@ -806,9 +817,11 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_article.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.hasPart' => array(
         'value' => array(
@@ -898,9 +911,11 @@ function views_news_lists_views_default_views() {
           'isAccessibleForFree' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.isAccessibleForFree' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.speakable' => array(
         'value' => array(
@@ -908,9 +923,11 @@ function views_news_lists_views_default_views() {
           'xpath' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.about' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.aggregateRating' => array(
         'value' => array(
@@ -921,6 +938,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_article.review' => array(
         'value' => array(
@@ -953,30 +971,39 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_item_list.@type' => array(
         'value' => 'ItemList',
+        'default' => '',
       ),
       'schema_item_list.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_item_list.itemListElement' => array(
         'value' => 'genres:page',
+        'default' => '',
       ),
       'schema_item_list.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.additionalType' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.address' => array(
         'value' => array(
@@ -988,6 +1015,7 @@ function views_news_lists_views_default_views() {
           'postalCode' => '',
           'addressCountry' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.geo' => array(
         'value' => array(
@@ -996,9 +1024,11 @@ function views_news_lists_views_default_views() {
           'latitude' => '',
           'longitude' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.telephone' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.contactPoint' => array(
         'value' => array(
@@ -1034,15 +1064,19 @@ function views_news_lists_views_default_views() {
           'faxnumber' => '',
           'productSupported' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.brand' => array(
         'value' => array(
@@ -1061,12 +1095,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.acceptsReservations' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.menu' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.openingHoursSpecification' => array(
         'value' => array(
@@ -1078,6 +1115,7 @@ function views_news_lists_views_default_views() {
           'validFrom' => '',
           'validThrough' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.image' => array(
         'value' => array(
@@ -1088,6 +1126,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.logo' => array(
         'value' => array(
@@ -1097,6 +1136,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.potentialAction' => array(
         'value' => array(
@@ -1144,9 +1184,11 @@ function views_news_lists_views_default_views() {
             'url' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.priceRange' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.memberOf' => array(
         'value' => array(
@@ -1203,6 +1245,7 @@ function views_news_lists_views_default_views() {
           'url' => '',
           'sameAs' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.aggregateRating' => array(
         'value' => array(
@@ -1213,6 +1256,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.starRating' => array(
         'value' => array(
@@ -1223,6 +1267,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.review' => array(
         'value' => array(
@@ -1255,24 +1300,31 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_video_object.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.uploadDate' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.expires' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.thumbnailUrl' => array(
         'value' => array(
@@ -1282,21 +1334,27 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.contentUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.embedUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.duration' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.interactionCount' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.transcript' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.aggregateRating' => array(
         'value' => array(
@@ -1307,6 +1365,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.review' => array(
         'value' => array(
@@ -1339,21 +1398,27 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.publisher' => array(
         'value' => array(
@@ -1372,6 +1437,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.potentialAction' => array(
         'value' => array(
@@ -1400,20 +1466,24 @@ function views_news_lists_views_default_views() {
           ),
           '@type' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.inLanguage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.translationOfWork' => array(
         'value' => array(
           '@id' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.workTranslation' => array(
         'value' => array(
           'pivot' => '',
           '@id' => '',
         ),
+        'default' => '',
       ),
     ),
   );
@@ -1716,8 +1786,8 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Новости от читателей сайта | [site:name]',
-        'default' => '[view:title] | [site:name]',
+        'value' => 'Новости от читателей сайта [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
         'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта [site:name].',
@@ -1733,6 +1803,7 @@ function views_news_lists_views_default_views() {
       ),
       'author' => array(
         'value' => '',
+        'default' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -1774,16 +1845,16 @@ function views_news_lists_views_default_views() {
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
+        'value' => '',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -1840,6 +1911,7 @@ function views_news_lists_views_default_views() {
       ),
       'google' => array(
         'value' => '',
+        'default' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -1858,12 +1930,12 @@ function views_news_lists_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Новости от читателей сайта [site:name]',
-        'default' => '[view:title]',
+        'value' => 'Новости от читателей сайта [site:name] [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -1882,7 +1954,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'og:image' => array(
-        'value' => '/sites/default/files//social_preview/default.png',
+        'value' => '/sites/default/files/social_preview/default.png',
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'og:image:url' => array(
@@ -1895,6 +1967,7 @@ function views_news_lists_views_default_views() {
       ),
       'og:image:alt' => array(
         'value' => '',
+        'default' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -2093,12 +2166,12 @@ function views_news_lists_views_default_views() {
         'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Новости от читателей сайта [site:name]',
-        'default' => '[view:title]',
+        'value' => 'Новости от читателей сайта [site:name] [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => 'Новости и фото из Горок, Дрибина и Мстиславля от читателей сайта [site:name].',
@@ -2109,7 +2182,7 @@ function views_news_lists_views_default_views() {
         'default' => '',
       ),
       'twitter:image' => array(
-        'value' => '/sites/default/files//social_preview/default.png',
+        'value' => '/sites/default/files/social_preview/default.png',
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'twitter:image:width' => array(
@@ -2218,15 +2291,19 @@ function views_news_lists_views_default_views() {
       ),
       'schema_article.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.headline' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.author' => array(
         'value' => array(
@@ -2245,6 +2322,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.publisher' => array(
         'value' => array(
@@ -2262,12 +2340,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.datePublished' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.dateModified' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.image' => array(
         'value' => array(
@@ -2278,9 +2359,11 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_article.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.hasPart' => array(
         'value' => array(
@@ -2306,6 +2389,9 @@ function views_news_lists_views_default_views() {
                 '@type' => '',
                 '@id' => '',
                 'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
                 'priceCurrency' => '',
                 'url' => '',
                 'itemCondition' => '',
@@ -2313,6 +2399,7 @@ function views_news_lists_views_default_views() {
                 'availabilityStarts' => '',
                 'availabilityEnds' => '',
                 'validFrom' => '',
+                'priceValidUntil' => '',
                 'category' => '',
                 'eligibleRegion' => array(
                   'pivot' => '',
@@ -2338,6 +2425,9 @@ function views_news_lists_views_default_views() {
               '@type' => '',
               '@id' => '',
               'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
               'priceCurrency' => '',
               'url' => '',
               'itemCondition' => '',
@@ -2345,6 +2435,7 @@ function views_news_lists_views_default_views() {
               'availabilityStarts' => '',
               'availabilityEnds' => '',
               'validFrom' => '',
+              'priceValidUntil' => '',
               'category' => '',
               'eligibleRegion' => array(
                 'pivot' => '',
@@ -2362,9 +2453,11 @@ function views_news_lists_views_default_views() {
           'isAccessibleForFree' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.isAccessibleForFree' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.speakable' => array(
         'value' => array(
@@ -2372,9 +2465,11 @@ function views_news_lists_views_default_views() {
           'xpath' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.about' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.aggregateRating' => array(
         'value' => array(
@@ -2385,6 +2480,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_article.review' => array(
         'value' => array(
@@ -2417,30 +2513,39 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_item_list.@type' => array(
         'value' => 'ItemList',
+        'default' => '',
       ),
       'schema_item_list.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_item_list.itemListElement' => array(
         'value' => 'news_from_readers:page',
+        'default' => '',
       ),
       'schema_item_list.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.additionalType' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.address' => array(
         'value' => array(
@@ -2452,6 +2557,7 @@ function views_news_lists_views_default_views() {
           'postalCode' => '',
           'addressCountry' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.geo' => array(
         'value' => array(
@@ -2460,9 +2566,11 @@ function views_news_lists_views_default_views() {
           'latitude' => '',
           'longitude' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.telephone' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.contactPoint' => array(
         'value' => array(
@@ -2493,25 +2601,24 @@ function views_news_lists_views_default_views() {
               'latitude' => '',
               'longitude' => '',
             ),
-            'country' => array(
-              'pivot' => '',
-              '@type' => '',
-              'name' => '',
-            ),
           ),
           'email' => '',
           'faxnumber' => '',
           'productSupported' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.brand' => array(
         'value' => array(
@@ -2530,12 +2637,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.acceptsReservations' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.menu' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.openingHoursSpecification' => array(
         'value' => array(
@@ -2547,6 +2657,7 @@ function views_news_lists_views_default_views() {
           'validFrom' => '',
           'validThrough' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.image' => array(
         'value' => array(
@@ -2557,6 +2668,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.logo' => array(
         'value' => array(
@@ -2566,6 +2678,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.potentialAction' => array(
         'value' => array(
@@ -2613,9 +2726,11 @@ function views_news_lists_views_default_views() {
             'url' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.priceRange' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.memberOf' => array(
         'value' => array(
@@ -2672,6 +2787,7 @@ function views_news_lists_views_default_views() {
           'url' => '',
           'sameAs' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.aggregateRating' => array(
         'value' => array(
@@ -2682,6 +2798,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.starRating' => array(
         'value' => array(
@@ -2692,6 +2809,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.review' => array(
         'value' => array(
@@ -2724,24 +2842,31 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_video_object.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.uploadDate' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.expires' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.thumbnailUrl' => array(
         'value' => array(
@@ -2751,21 +2876,27 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.contentUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.embedUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.duration' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.interactionCount' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.transcript' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.aggregateRating' => array(
         'value' => array(
@@ -2776,6 +2907,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.review' => array(
         'value' => array(
@@ -2808,21 +2940,27 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.publisher' => array(
         'value' => array(
@@ -2841,6 +2979,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.potentialAction' => array(
         'value' => array(
@@ -2869,20 +3008,24 @@ function views_news_lists_views_default_views() {
           ),
           '@type' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.inLanguage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.translationOfWork' => array(
         'value' => array(
           '@id' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.workTranslation' => array(
         'value' => array(
           'pivot' => '',
           '@id' => '',
         ),
+        'default' => '',
       ),
     ),
   );
@@ -3007,96 +3150,6 @@ function views_news_lists_views_default_views() {
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'block-preview';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Зрабіць галоўнай навіной.: Queue */
-  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
-  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
-  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
-    'main_news' => 'main_news',
-  );
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Галоўны фотаздымак */
-  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
-  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['element_wrapper_class'] = 'preview-photo';
-  $handler->display->display_options['fields']['field_pics']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
-  $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
-    'image_link' => 'content',
-    'colorbox_settings' => array(
-      'colorbox_group' => 'article',
-      'colorbox_gallery' => 'post',
-      'colorbox_gallery_custom' => '',
-      'colorbox_caption' => 'auto',
-      'colorbox_caption_custom' => '',
-    ),
-  );
-  /* Поле: Змест: Загаловак */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title]<p></p>';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'preview-title';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Вузел: Published at */
-  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Статус публікацыі */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
-    0 => '56',
-  );
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
-  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
-  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
-  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
-  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
-  $handler->display->display_options['filters']['in_queue']['value'] = '0';
-  $handler->display->display_options['block_description'] = 'Фотаблог';
-  $handler->display->display_options['block_caching'] = '8';
-
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -3210,8 +3263,8 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА | [site:name]',
-        'default' => '[view:title] | [site:name]',
+        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
         'value' => 'Фоторепортажи и фото новостей, людей, улиц, природы и достопримечательностей на сайте горки инфо из Горок, Мстиславля, Дрибина и БГСХА.',
@@ -3227,6 +3280,7 @@ function views_news_lists_views_default_views() {
       ),
       'author' => array(
         'value' => '',
+        'default' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -3268,16 +3322,16 @@ function views_news_lists_views_default_views() {
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
+        'value' => '',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -3334,6 +3388,7 @@ function views_news_lists_views_default_views() {
       ),
       'google' => array(
         'value' => '',
+        'default' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -3352,12 +3407,12 @@ function views_news_lists_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА',
-        'default' => '[view:title]',
+        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -3389,6 +3444,7 @@ function views_news_lists_views_default_views() {
       ),
       'og:image:alt' => array(
         'value' => '',
+        'default' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -3587,12 +3643,12 @@ function views_news_lists_views_default_views() {
         'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА',
-        'default' => '[view:title]',
+        'value' => 'Фото из Горок, Мстиславля, Дрибина и БГСХА [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => 'Фоторепортажи и фото новостей, людей, улиц, природы и достопримечательностей на сайте горки инфо из Горок, Мстиславля, Дрибина и БГСХА.',
@@ -3712,15 +3768,19 @@ function views_news_lists_views_default_views() {
       ),
       'schema_article.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.headline' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.author' => array(
         'value' => array(
@@ -3739,6 +3799,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.publisher' => array(
         'value' => array(
@@ -3756,12 +3817,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.datePublished' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.dateModified' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.image' => array(
         'value' => array(
@@ -3772,9 +3836,11 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_article.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.hasPart' => array(
         'value' => array(
@@ -3864,9 +3930,11 @@ function views_news_lists_views_default_views() {
           'isAccessibleForFree' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.isAccessibleForFree' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.speakable' => array(
         'value' => array(
@@ -3874,9 +3942,11 @@ function views_news_lists_views_default_views() {
           'xpath' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.about' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.aggregateRating' => array(
         'value' => array(
@@ -3887,6 +3957,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_article.review' => array(
         'value' => array(
@@ -3919,30 +3990,39 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_item_list.@type' => array(
         'value' => 'ItemList',
+        'default' => '',
       ),
       'schema_item_list.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_item_list.itemListElement' => array(
         'value' => 'photoblog:page',
+        'default' => '',
       ),
       'schema_item_list.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.additionalType' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.address' => array(
         'value' => array(
@@ -3954,6 +4034,7 @@ function views_news_lists_views_default_views() {
           'postalCode' => '',
           'addressCountry' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.geo' => array(
         'value' => array(
@@ -3962,9 +4043,11 @@ function views_news_lists_views_default_views() {
           'latitude' => '',
           'longitude' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.telephone' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.contactPoint' => array(
         'value' => array(
@@ -4000,15 +4083,19 @@ function views_news_lists_views_default_views() {
           'faxnumber' => '',
           'productSupported' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.brand' => array(
         'value' => array(
@@ -4027,12 +4114,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.acceptsReservations' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.menu' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.openingHoursSpecification' => array(
         'value' => array(
@@ -4044,6 +4134,7 @@ function views_news_lists_views_default_views() {
           'validFrom' => '',
           'validThrough' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.image' => array(
         'value' => array(
@@ -4054,6 +4145,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.logo' => array(
         'value' => array(
@@ -4063,6 +4155,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.potentialAction' => array(
         'value' => array(
@@ -4110,9 +4203,11 @@ function views_news_lists_views_default_views() {
             'url' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.priceRange' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.memberOf' => array(
         'value' => array(
@@ -4169,6 +4264,7 @@ function views_news_lists_views_default_views() {
           'url' => '',
           'sameAs' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.aggregateRating' => array(
         'value' => array(
@@ -4179,6 +4275,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.starRating' => array(
         'value' => array(
@@ -4189,6 +4286,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.review' => array(
         'value' => array(
@@ -4221,24 +4319,31 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_video_object.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.uploadDate' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.expires' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.thumbnailUrl' => array(
         'value' => array(
@@ -4248,21 +4353,27 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.contentUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.embedUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.duration' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.interactionCount' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.transcript' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.aggregateRating' => array(
         'value' => array(
@@ -4273,6 +4384,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.review' => array(
         'value' => array(
@@ -4305,21 +4417,27 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.publisher' => array(
         'value' => array(
@@ -4338,6 +4456,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.potentialAction' => array(
         'value' => array(
@@ -4366,24 +4485,118 @@ function views_news_lists_views_default_views() {
           ),
           '@type' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.inLanguage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.translationOfWork' => array(
         'value' => array(
           '@id' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.workTranslation' => array(
         'value' => array(
           'pivot' => '',
           '@id' => '',
         ),
+        'default' => '',
       ),
     ),
   );
   $handler->display->display_options['path'] = 'photos.html';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-preview';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'main_news' => 'main_news',
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Галоўны фотаздымак */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['element_wrapper_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_pics']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
+    'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'article',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
+  );
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title]<p></p>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'preview-title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Статус публікацыі */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    0 => '56',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
+  $handler->display->display_options['block_description'] = 'Фотаблог';
+  $handler->display->display_options['block_caching'] = '8';
   $translatables['photoblog'] = array(
     t('Master'),
     t('болей'),
@@ -4395,8 +4608,6 @@ function views_news_lists_views_default_views() {
     t('Фотаблог'),
     t('<a href="/photos.html">ФОТАБЛОГ</a>'),
     t('[title]<p></p>'),
-    t('Block'),
-    t('чарга'),
     t('Старонка'),
     t('Фото из Горок, Мстиславля и Дрибина'),
     t('Items per page'),
@@ -4418,6 +4629,8 @@ function views_news_lists_views_default_views() {
 <span class="comments-count">[comment_count]</span>
 </div>'),
     t('[title][comment_count]'),
+    t('Block'),
+    t('чарга'),
   );
   $export['photoblog'] = $view;
 
@@ -4504,112 +4717,6 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-
-  /* Display: Блок */
-  $handler = $view->new_display('block', 'Блок', 'block');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'block-preview';
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Загаловак: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'Відэаблог';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/videos.html">ВІДЭАБЛОГ</a>';
-  $handler->display->display_options['header']['area']['format'] = 'author_text';
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Зрабіць галоўнай навіной.: Queue */
-  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
-  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
-  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
-    'main_news' => 'main_news',
-  );
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Галоўнае відэа */
-  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
-  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['label'] = '';
-  $handler->display->display_options['fields']['field_video']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['element_class'] = 'preview-photo';
-  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
-  $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
-  $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'image_link' => 'content',
-  );
-  /* Поле: Змест: Галоўны фотаздымак */
-  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
-  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
-  $handler->display->display_options['fields']['field_pics']['label'] = '';
-  $handler->display->display_options['fields']['field_pics']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['element_wrapper_class'] = 'preview-photo';
-  $handler->display->display_options['fields']['field_pics']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_pics']['empty'] = '[field_video]';
-  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
-  $handler->display->display_options['fields']['field_pics']['settings'] = array(
-    'picture_mapping' => 'mediagrid',
-    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
-    'lazyload' => 0,
-    'lazyload_aspect_ratio' => 0,
-    'image_link' => 'content',
-    'colorbox_settings' => array(
-      'colorbox_group' => 'mediagrid',
-      'colorbox_gallery' => 'post',
-      'colorbox_gallery_custom' => '',
-      'colorbox_caption' => 'auto',
-      'colorbox_caption_custom' => '',
-    ),
-  );
-  /* Поле: Змест: Загаловак */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_class'] = 'preview-title';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Вузел: Published at */
-  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Статус публікацыі */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
-    57 => '57',
-  );
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
-  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
-  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
-  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
-  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
-  $handler->display->display_options['filters']['in_queue']['value'] = '0';
-  $handler->display->display_options['block_description'] = 'Відэаблог';
-  $handler->display->display_options['block_caching'] = '8';
 
   /* Display: Старонка */
   $handler = $view->new_display('page', 'Старонка', 'page');
@@ -4757,8 +4864,8 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['metatags'] = array(
     'und' => array(
       'title' => array(
-        'value' => 'Новости с видео на сайте горки инфо | [site:name]',
-        'default' => '[view:title] | [site:name]',
+        'value' => 'Новости с видео на сайте горки инфо [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
       ),
       'description' => array(
         'value' => 'Видео, ролики и новости с видео из Горок, Мстиславля, БГСХА, Дрибина и других районов Могилевской области и Беларуси.',
@@ -4774,6 +4881,7 @@ function views_news_lists_views_default_views() {
       ),
       'author' => array(
         'value' => '',
+        'default' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -4815,16 +4923,16 @@ function views_news_lists_views_default_views() {
         'default' => 'sites/default/files/social_preview/default.png',
       ),
       'canonical' => array(
-        'value' => '[view:url]',
-        'default' => '[view:url]',
+        'value' => '',
+        'default' => '[current-page:url]',
       ),
       'set_cookie' => array(
         'value' => '',
         'default' => '',
       ),
       'shortlink' => array(
-        'value' => '[current-page:url:unaliased]',
-        'default' => '[current-page:url:unaliased]',
+        'value' => '',
+        'default' => '',
       ),
       'original-source' => array(
         'value' => '',
@@ -4881,6 +4989,7 @@ function views_news_lists_views_default_views() {
       ),
       'google' => array(
         'value' => '',
+        'default' => '',
       ),
       'fb:admins' => array(
         'value' => '',
@@ -4899,12 +5008,12 @@ function views_news_lists_views_default_views() {
         'default' => 'website',
       ),
       'og:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'og:title' => array(
-        'value' => 'Видео про Горки, Дрибин, Мстиславль и БГСХА',
-        'default' => '[view:title]',
+        'value' => 'Видео про Горки, Дрибин, Мстиславль и БГСХА [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'og:determiner' => array(
         'value' => '',
@@ -4936,6 +5045,7 @@ function views_news_lists_views_default_views() {
       ),
       'og:image:alt' => array(
         'value' => '',
+        'default' => '',
       ),
       'og:image:type' => array(
         'value' => 'image/png',
@@ -5134,12 +5244,12 @@ function views_news_lists_views_default_views() {
         'default' => '120533731',
       ),
       'twitter:url' => array(
-        'value' => '[view:url]',
+        'value' => '',
         'default' => '[view:url]',
       ),
       'twitter:title' => array(
-        'value' => 'Видео про Горки, Дрибин, Мстиславль и БГСХА',
-        'default' => '[view:title]',
+        'value' => 'Видео про Горки, Дрибин, Мстиславль и БГСХА [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
       ),
       'twitter:description' => array(
         'value' => 'Видео из Горок, Дрибина, Мстиславля, БГСХА. Відэа з Горак, Дрыбіна, Мсціслава, БДСГА.',
@@ -5259,15 +5369,19 @@ function views_news_lists_views_default_views() {
       ),
       'schema_article.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.headline' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.author' => array(
         'value' => array(
@@ -5286,6 +5400,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.publisher' => array(
         'value' => array(
@@ -5303,12 +5418,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_article.datePublished' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.dateModified' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.image' => array(
         'value' => array(
@@ -5319,9 +5437,11 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_article.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.hasPart' => array(
         'value' => array(
@@ -5411,9 +5531,11 @@ function views_news_lists_views_default_views() {
           'isAccessibleForFree' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.isAccessibleForFree' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.speakable' => array(
         'value' => array(
@@ -5421,9 +5543,11 @@ function views_news_lists_views_default_views() {
           'xpath' => '',
           'cssSelector' => '',
         ),
+        'default' => '',
       ),
       'schema_article.about' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_article.aggregateRating' => array(
         'value' => array(
@@ -5434,6 +5558,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_article.review' => array(
         'value' => array(
@@ -5466,30 +5591,39 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_item_list.@type' => array(
         'value' => 'ItemList',
+        'default' => '',
       ),
       'schema_item_list.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_item_list.itemListElement' => array(
         'value' => 'videoblog:page',
+        'default' => '',
       ),
       'schema_item_list.mainEntityOfPage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.additionalType' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.address' => array(
         'value' => array(
@@ -5501,6 +5635,7 @@ function views_news_lists_views_default_views() {
           'postalCode' => '',
           'addressCountry' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.geo' => array(
         'value' => array(
@@ -5509,9 +5644,11 @@ function views_news_lists_views_default_views() {
           'latitude' => '',
           'longitude' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.telephone' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.contactPoint' => array(
         'value' => array(
@@ -5547,15 +5684,19 @@ function views_news_lists_views_default_views() {
           'faxnumber' => '',
           'productSupported' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.brand' => array(
         'value' => array(
@@ -5574,12 +5715,15 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.acceptsReservations' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.menu' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.openingHoursSpecification' => array(
         'value' => array(
@@ -5591,6 +5735,7 @@ function views_news_lists_views_default_views() {
           'validFrom' => '',
           'validThrough' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.image' => array(
         'value' => array(
@@ -5601,6 +5746,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.logo' => array(
         'value' => array(
@@ -5610,6 +5756,7 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.potentialAction' => array(
         'value' => array(
@@ -5657,9 +5804,11 @@ function views_news_lists_views_default_views() {
             'url' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_organization.priceRange' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_organization.memberOf' => array(
         'value' => array(
@@ -5716,6 +5865,7 @@ function views_news_lists_views_default_views() {
           'url' => '',
           'sameAs' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.aggregateRating' => array(
         'value' => array(
@@ -5726,6 +5876,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.starRating' => array(
         'value' => array(
@@ -5736,6 +5887,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_organization.review' => array(
         'value' => array(
@@ -5768,24 +5920,31 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_video_object.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.description' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.uploadDate' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.expires' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.thumbnailUrl' => array(
         'value' => array(
@@ -5795,21 +5954,27 @@ function views_news_lists_views_default_views() {
           'width' => '',
           'height' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.contentUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.embedUrl' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.duration' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.interactionCount' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.transcript' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_video_object.aggregateRating' => array(
         'value' => array(
@@ -5820,6 +5985,7 @@ function views_news_lists_views_default_views() {
           'bestRating' => '',
           'worstRating' => '',
         ),
+        'default' => '',
       ),
       'schema_video_object.review' => array(
         'value' => array(
@@ -5852,21 +6018,27 @@ function views_news_lists_views_default_views() {
             'worstRating' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.@type' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.@id' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.name' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.url' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.sameAs' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.publisher' => array(
         'value' => array(
@@ -5885,6 +6057,7 @@ function views_news_lists_views_default_views() {
             'height' => '',
           ),
         ),
+        'default' => '',
       ),
       'schema_web_site.potentialAction' => array(
         'value' => array(
@@ -5913,24 +6086,134 @@ function views_news_lists_views_default_views() {
           ),
           '@type' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.inLanguage' => array(
         'value' => '',
+        'default' => '',
       ),
       'schema_web_site.translationOfWork' => array(
         'value' => array(
           '@id' => '',
         ),
+        'default' => '',
       ),
       'schema_web_site.workTranslation' => array(
         'value' => array(
           'pivot' => '',
           '@id' => '',
         ),
+        'default' => '',
       ),
     ),
   );
   $handler->display->display_options['path'] = 'videos.html';
+
+  /* Display: Блок */
+  $handler = $view->new_display('block', 'Блок', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-preview';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Загаловак: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Відэаблог';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/videos.html">ВІДЭАБЛОГ</a>';
+  $handler->display->display_options['header']['area']['format'] = 'author_text';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'main_news' => 'main_news',
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Поле: Змест: Галоўнае відэа */
+  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
+  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_video']['element_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_video']['type'] = 'video_embed_field_thumbnail';
+  $handler->display->display_options['fields']['field_video']['settings'] = array(
+    'image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'image_link' => 'content',
+  );
+  /* Поле: Змест: Галоўны фотаздымак */
+  $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['table'] = 'field_data_field_pics';
+  $handler->display->display_options['fields']['field_pics']['field'] = 'field_pics';
+  $handler->display->display_options['fields']['field_pics']['label'] = '';
+  $handler->display->display_options['fields']['field_pics']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_pics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['element_wrapper_class'] = 'preview-photo';
+  $handler->display->display_options['fields']['field_pics']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_pics']['empty'] = '[field_video]';
+  $handler->display->display_options['fields']['field_pics']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_pics']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_pics']['settings'] = array(
+    'picture_mapping' => 'mediagrid',
+    'fallback_image_style' => 'mediagrid_breakpoints_theme_horki2_fallback',
+    'lazyload' => 0,
+    'lazyload_aspect_ratio' => 0,
+    'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'mediagrid',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
+  );
+  /* Поле: Змест: Загаловак */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'preview-title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Вузел: Published at */
+  $handler->display->display_options['sorts']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Змест: Статус публікацыі */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Змест: Рубрыкі (field_rubric_by_taxonomy) */
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['id'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['table'] = 'field_data_field_rubric_by_taxonomy';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['field'] = 'field_rubric_by_taxonomy_tid';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['value'] = array(
+    57 => '57',
+  );
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '0';
+  $handler->display->display_options['block_description'] = 'Відэаблог';
+  $handler->display->display_options['block_caching'] = '8';
   $translatables['videoblog'] = array(
     t('Master'),
     t('болей'),
@@ -5941,10 +6224,6 @@ function views_news_lists_views_default_views() {
     t('Desc'),
     t('Відэаблог'),
     t('<a href="/video.html">ВІДЭАБЛОГ</a>'),
-    t('Блок'),
-    t('<a href="/videos.html">ВІДЭАБЛОГ</a>'),
-    t('чарга'),
-    t('[field_video]'),
     t('Старонка'),
     t('Новости с видео'),
     t('Items per page'),
@@ -5961,10 +6240,14 @@ function views_news_lists_views_default_views() {
     t('1'),
     t('@count'),
     t('<img src="/sites/default/files/default_images/comment-icon.png" width="16" height="14" /> [comment_count]'),
+    t('[field_video]'),
     t('<div class="media-statistics">
 <span class="views-count">[recentcount]</span>
 <span class="comments-count">[comment_count]</span>
 </div>'),
+    t('Блок'),
+    t('<a href="/videos.html">ВІДЭАБЛОГ</a>'),
+    t('чарга'),
   );
   $export['videoblog'] = $view;
 

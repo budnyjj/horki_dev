@@ -47,7 +47,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -67,7 +67,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -98,7 +98,7 @@ function views_front_views_default_views() {
   $handler->display->display_options['footer']['area']['content'] = '<a class="flush-right-this bold-text rich-link" href="/node/add/news-from-readers">Дадаць сваю навіну!</a>';
   $handler->display->display_options['footer']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -163,14 +163,14 @@ function views_front_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Nodequeue: In queue */
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -271,19 +271,1265 @@ function views_front_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Nodequeue: In queue */
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  $handler->display->display_options['metatags'] = array(
+    'und' => array(
+      'title' => array(
+        'value' => '[view:title] [current-page:pager] | [site:name]',
+        'default' => '[view:title] [current-page:pager] | [site:name]',
+      ),
+      'description' => array(
+        'value' => '[view:description]',
+        'default' => '[view:description]',
+      ),
+      'abstract' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'robots' => array(
+        'value' => array(
+          'index' => 0,
+          'follow' => 0,
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+          'noimageindex' => 0,
+          'notranslate' => 0,
+        ),
+        'default' => array(),
+      ),
+      'news_keywords' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'standout' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rating' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'referrer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'rights' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'image_src' => array(
+        'value' => 'sites/default/files/social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'canonical' => array(
+        'value' => '',
+        'default' => '[current-page:url]',
+      ),
+      'set_cookie' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'shortlink' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'original-source' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'prev' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'next' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'content-language' => array(
+        'value' => 'ru',
+        'default' => 'ru',
+      ),
+      'geo.position' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.placename' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'geo.region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'icbm' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'refresh' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'revisit-after' => array(
+        'value' => '',
+        'period' => '',
+        'default' => '',
+      ),
+      'pragma' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'cache-control' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'google' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:admins' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'fb:app_id' => array(
+        'value' => '1404750383092736',
+        'default' => '1404750383092736',
+      ),
+      'fb:pages' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:type' => array(
+        'value' => 'website',
+        'default' => 'website',
+      ),
+      'og:url' => array(
+        'value' => '',
+        'default' => '[view:url]',
+      ),
+      'og:title' => array(
+        'value' => '[view:title] [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
+      ),
+      'og:determiner' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:updated_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:see_also' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image' => array(
+        'value' => 'sites/default/files/social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'og:image:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:alt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:image:type' => array(
+        'value' => 'image/png',
+        'default' => 'image/png',
+      ),
+      'og:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'og:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'og:latitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:longitude' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:street_address' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locality' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:region' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:postal_code' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:country_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:email' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:phone_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:fax_number' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:locale' => array(
+        'value' => 'ru_RU',
+        'default' => 'ru_RU',
+      ),
+      'og:locale:alternate' => array(
+        'value' => 'be_BY',
+        'default' => 'be_BY',
+      ),
+      'article:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:publisher' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:section' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:published_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:modified_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'article:expiration_time' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:first_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:last_name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:username' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'profile:gender' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:audio:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:author' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:isbn' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'book:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:secure_url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'og:video:type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:actor:role' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:director' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:writer' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:release_date' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:tag' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'video:series' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:card' => array(
+        'value' => 'summary_large_image',
+        'default' => 'summary_large_image',
+      ),
+      'twitter:creator' => array(
+        'value' => '@horki_info',
+        'default' => '@horki_info',
+      ),
+      'twitter:creator:id' => array(
+        'value' => '120533731',
+        'default' => '120533731',
+      ),
+      'twitter:url' => array(
+        'value' => '',
+        'default' => '[view:url]',
+      ),
+      'twitter:title' => array(
+        'value' => '[view:title] [current-page:pager]',
+        'default' => '[view:title] [current-page:pager]',
+      ),
+      'twitter:description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:dnt' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image' => array(
+        'value' => 'sites/default/files/social_preview/default.png',
+        'default' => 'sites/default/files/social_preview/default.png',
+      ),
+      'twitter:image:width' => array(
+        'value' => '968',
+        'default' => '968',
+      ),
+      'twitter:image:height' => array(
+        'value' => '504',
+        'default' => '504',
+      ),
+      'twitter:image:alt' => array(
+        'value' => '[current-page:title]',
+        'default' => '[current-page:title]',
+      ),
+      'twitter:image0' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:image3' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:width' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:height' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:player:stream:content_type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:country' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:iphone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:ipad' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:name:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:id:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:app:url:googleplay' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data1' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:label2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'twitter:data2' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.headline' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.author' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_article.publisher' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_article.datePublished' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.dateModified' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.mainEntityOfPage' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.hasPart' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'timeRequired' => '',
+          'potentialAction' => array(
+            'actionType' => '',
+            'pivot' => '',
+            'ConsumeAction' => array(
+              '@type' => '',
+              'target' => array(
+                'pivot' => '',
+                '@type' => '',
+                'urlTemplate' => '',
+                'actionPlatform' => '',
+                'inLanguage' => '',
+              ),
+              'expectsAcceptanceOf' => array(
+                'pivot' => '',
+                '@type' => '',
+                '@id' => '',
+                'price' => '',
+                'offerCount' => '',
+                'lowPrice' => '',
+                'highPrice' => '',
+                'priceCurrency' => '',
+                'url' => '',
+                'itemCondition' => '',
+                'availability' => '',
+                'availabilityStarts' => '',
+                'availabilityEnds' => '',
+                'validFrom' => '',
+                'priceValidUntil' => '',
+                'category' => '',
+                'eligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+                'ineligibleRegion' => array(
+                  'pivot' => '',
+                  '@type' => '',
+                  'name' => '',
+                ),
+              ),
+            ),
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'expectsAcceptanceOf' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'price' => '',
+              'offerCount' => '',
+              'lowPrice' => '',
+              'highPrice' => '',
+              'priceCurrency' => '',
+              'url' => '',
+              'itemCondition' => '',
+              'availability' => '',
+              'availabilityStarts' => '',
+              'availabilityEnds' => '',
+              'validFrom' => '',
+              'priceValidUntil' => '',
+              'category' => '',
+              'eligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+              'ineligibleRegion' => array(
+                'pivot' => '',
+                '@type' => '',
+                'name' => '',
+              ),
+            ),
+            '@type' => '',
+          ),
+          'isAccessibleForFree' => '',
+          'cssSelector' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.isAccessibleForFree' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.speakable' => array(
+        'value' => array(
+          '@type' => '',
+          'xpath' => '',
+          'cssSelector' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.about' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_article.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_article.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_item_list.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_item_list.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_item_list.itemListElement' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_item_list.mainEntityOfPage' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.additionalType' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.address' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'streetAddress' => '',
+          'addressLocality' => '',
+          'addressRegion' => '',
+          'postalCode' => '',
+          'addressCountry' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.geo' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'latitude' => '',
+          'longitude' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.telephone' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.contactPoint' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'telephone' => '',
+          'url' => '',
+          'availableLanguage' => '',
+          'contactType' => '',
+          'contactOption' => '',
+          'areaServed' => array(
+            'pivot' => '',
+            '@type' => '',
+            'name' => '',
+            'url' => '',
+            'address' => array(
+              'pivot' => '',
+              '@type' => '',
+              'streetAddress' => '',
+              'addressLocality' => '',
+              'addressRegion' => '',
+              'postalCode' => '',
+              'addressCountry' => '',
+            ),
+            'geo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'latitude' => '',
+              'longitude' => '',
+            ),
+          ),
+          'email' => '',
+          'faxnumber' => '',
+          'productSupported' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.sameAs' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.brand' => array(
+        'value' => array(
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'description' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_organization.acceptsReservations' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.menu' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.openingHoursSpecification' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'dayOfWeek' => '',
+          'opens' => '',
+          'closes' => '',
+          'validFrom' => '',
+          'validThrough' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.image' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.logo' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'TradeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'OrganizeAction' => array(
+            '@type' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+            'result' => array(
+              'pivot' => '',
+              '@type' => '',
+              '@id' => '',
+              'name' => '',
+              'url' => '',
+            ),
+          ),
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+          'result' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_organization.priceRange' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_organization.memberOf' => array(
+        'value' => array(
+          '@type' => '',
+          'name' => '',
+          'programName' => '',
+          'alternateName' => '',
+          'hostingOrganization' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'member' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'membershipNumber' => '',
+          'identifier' => '',
+          'additionalType' => '',
+          'description' => '',
+          'disambiguatingDescription' => '',
+          'image' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+          'mainEntityOfPage' => '',
+          'url' => '',
+          'sameAs' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.starRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_organization.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_video_object.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.description' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.uploadDate' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.expires' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.thumbnailUrl' => array(
+        'value' => array(
+          '@type' => '',
+          'representativeOfPage' => '',
+          'url' => '',
+          'width' => '',
+          'height' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_video_object.contentUrl' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.embedUrl' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.duration' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.interactionCount' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.transcript' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_video_object.aggregateRating' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'ratingValue' => '',
+          'ratingCount' => '',
+          'bestRating' => '',
+          'worstRating' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_video_object.review' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          'reviewBody' => '',
+          'datePublished' => '',
+          'author' => array(
+            'pivot' => '',
+            '@type' => '',
+            '@id' => '',
+            'name' => '',
+            'url' => '',
+            'sameAs' => '',
+            'logo' => array(
+              'pivot' => '',
+              '@type' => '',
+              'representativeOfPage' => '',
+              'url' => '',
+              'width' => '',
+              'height' => '',
+            ),
+          ),
+          'reviewRating' => array(
+            'pivot' => '',
+            '@type' => '',
+            'ratingValue' => '',
+            'ratingCount' => '',
+            'bestRating' => '',
+            'worstRating' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.@type' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.@id' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.name' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.url' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.sameAs' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.publisher' => array(
+        'value' => array(
+          'pivot' => '',
+          '@type' => '',
+          '@id' => '',
+          'name' => '',
+          'url' => '',
+          'sameAs' => '',
+          'logo' => array(
+            'pivot' => '',
+            '@type' => '',
+            'representativeOfPage' => '',
+            'url' => '',
+            'width' => '',
+            'height' => '',
+          ),
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.potentialAction' => array(
+        'value' => array(
+          'actionType' => '',
+          'pivot' => '',
+          'SearchAction' => array(
+            '@type' => '',
+            'query' => '',
+            'query-input' => '',
+            'target' => array(
+              'pivot' => '',
+              '@type' => '',
+              'urlTemplate' => '',
+              'actionPlatform' => '',
+              'inLanguage' => '',
+            ),
+          ),
+          'query' => '',
+          'query-input' => '',
+          'target' => array(
+            'pivot' => '',
+            '@type' => '',
+            'urlTemplate' => '',
+            'actionPlatform' => '',
+            'inLanguage' => '',
+          ),
+          '@type' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.inLanguage' => array(
+        'value' => '',
+        'default' => '',
+      ),
+      'schema_web_site.translationOfWork' => array(
+        'value' => array(
+          '@id' => '',
+        ),
+        'default' => '',
+      ),
+      'schema_web_site.workTranslation' => array(
+        'value' => array(
+          'pivot' => '',
+          '@id' => '',
+        ),
+        'default' => '',
+      ),
+    ),
+  );
   $handler->display->display_options['path'] = 'main';
   $translatables['front'] = array(
     t('Master'),
