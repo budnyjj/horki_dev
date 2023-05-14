@@ -2669,6 +2669,10 @@ ul.tabs li.active a {
 }
 
 /* company node */
+.node-company .content:first-child label {
+    display: none;
+}
+
 .node-company .rate-widget {
     margin-bottom: 10px;
     width: 110px;
