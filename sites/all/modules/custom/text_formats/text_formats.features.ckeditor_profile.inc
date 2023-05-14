@@ -27,7 +27,7 @@ function text_formats_ckeditor_profile_defaults() {
         'uicolor_user' => 'default',
         'width' => '100%',
         'lang' => 'ru',
-        'auto_lang' => 't',
+        'auto_lang' => 'f',
         'language_direction' => 'default',
         'allowed_content' => 't',
         'extraAllowedContent' => 'img[data-picture-mapping]',
@@ -57,7 +57,9 @@ function text_formats_ckeditor_profile_defaults() {
         'forcePasteAsPlainText' => 't',
         'html_entities' => 't',
         'scayt_autoStartup' => 'f',
-        'theme_config_js' => 'f',
+        'disableNativeSpellChecker' => 'f',
+        'config_js' => 'none',
+        'config_js_path' => '',
         'js_conf' => 'config.disableNativeSpellChecker = false;
 config.image_prefillDimensions = false;
 ',
@@ -121,7 +123,7 @@ config.image_prefillDimensions = false;
         'uicolor_user' => 'default',
         'width' => '100%',
         'lang' => 'ru',
-        'auto_lang' => 't',
+        'auto_lang' => 'f',
         'language_direction' => 'default',
         'allowed_content' => 't',
         'extraAllowedContent' => 'img[data-picture-mapping];

@@ -54,7 +54,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -227,7 +227,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1491,7 +1491,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'апошняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1555,7 +1555,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1603,7 +1603,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1707,7 +1707,7 @@ function views_news_lists_views_default_views() {
     'news_from_readers' => 'news_from_readers',
   );
   $handler->display->display_options['filters']['type']['group'] = 2;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2963,7 +2963,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Фотаблог';
-  $handler->display->display_options['header']['area']['content'] = '<a href="/photo.html">ФОТАБЛОГ</a>';
+  $handler->display->display_options['header']['area']['content'] = '<a href="/photos.html">ФОТАБЛОГ</a>';
   $handler->display->display_options['header']['area']['format'] = 'author_text';
   /* Поле: Змест: Галоўны фотаздымак */
   $handler->display->display_options['fields']['field_pics']['id'] = 'field_pics';
@@ -2991,7 +2991,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3018,7 +3018,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -3073,7 +3073,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3088,7 +3088,7 @@ function views_news_lists_views_default_views() {
     0 => '56',
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Nodequeue: In queue */
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -4393,7 +4393,7 @@ function views_news_lists_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Фотаблог'),
-    t('<a href="/photo.html">ФОТАБЛОГ</a>'),
+    t('<a href="/photos.html">ФОТАБЛОГ</a>'),
     t('[title]<p></p>'),
     t('Block'),
     t('чарга'),
@@ -4481,7 +4481,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4518,7 +4518,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<a href="/videos.html">ВІДЭАБЛОГ</a>';
   $handler->display->display_options['header']['area']['format'] = 'author_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Зрабіць галоўнай навіной.: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
@@ -4586,7 +4586,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4602,7 +4602,7 @@ function views_news_lists_views_default_views() {
   );
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_rubric_by_taxonomy_tid']['vocabulary'] = 'rubrics';
-  /* Filter criterion: Nodequeue: In queue */
+  /* Filter criterion: Зрабіць галоўнай навіной.: In queue */
   $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
@@ -4738,7 +4738,7 @@ function views_news_lists_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
