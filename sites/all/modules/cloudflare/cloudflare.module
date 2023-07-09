@@ -1,0 +1,232 @@
+<?php
+
+define('CLOUDFLARE_URL_IPV4_RANGE', 'https://www.cloudflare.com/ips-v4');
+define('CLOUDFLARE_ALWAYSONLINE_USER_AGENT', 'Mozilla/5.0 (compatible; CloudFlare-AlwaysOnline/1.0; +http://www.cloudflare.com/always-online) AppleWebKit/534.34');
+
+/**
+* Implementation of hook_boot().
+* 
+* Replace $_SERVER['REMOTE_ADDR'] with $_SERVER['HTTP_CF_CONNECTING_IP'] header
+* Properly flag $_SERVER['HTTPS'] and set the base-url correctly if cloudflare is using flexible SSL 
+*/
+function cloudflare_boot() {
+  // This function might be invoked twice if flexible SSL support is enabled
+  // So make sure it is only ever run once.
+  static $run_once = TRUE;
+  if ($run_once) {
+    $run_once = FALSE;
+  }
+  else {
+    return;
+  }
+
+  // Only run if this is a CloudFlare request
+  if (empty($_SERVER['HTTP_CF_RAY'])) {
+    return;
+  }
+
+  global $base_url;
+  global $conf;
+
+  // Assign a proper IP address for end-client connecting via cloudflare using CF-Connecting-IP header
+  if (variable_get('cloudflare_cf_connecting_ip', FALSE) && !empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+    if (variable_get('cloudflare_cf_connecting_ip') == 'trust') {
+      $connecting_ip = $_SERVER['REMOTE_ADDR'];
+      $_SERVER['ORIG_REMOTE_ADDR'] = $connecting_ip;
+      $_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
+      $trusted = TRUE;
+      $conf['reverse_proxy'] = FALSE; // Disable any furthur reverse proxy handling.
+    }
+    else {
+      $trusted = FALSE;
+      // If an array of known reverse proxy IPs is provided, then trust
+      // the CF header if request really comes from one of them or from a cloudflare IP.
+      $reverse_proxy_addresses = variable_get('reverse_proxy_addresses', array());
+      $connecting_ip = $_SERVER['REMOTE_ADDR'];
+
+      if (in_array($connecting_ip, $reverse_proxy_addresses) || cloudflare_ip_address_in_range($connecting_ip)) {
+        $_SERVER['ORIG_REMOTE_ADDR'] = $connecting_ip;
+        $_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
+        $trusted = TRUE;
+        $conf['reverse_proxy'] = FALSE; // Disable any furthur reverse proxy handling.
+      }
+    }
+  }
+  // If we are not configured to use CF-Connecting-IP then use X-Forwarded-For instead
+  // This is the recommended method and is used by default.
+  else {
+    $conf['reverse_proxy'] = TRUE;
+    // Remove CloudFlare IP addresses from X-Forwarded-For header. 
+    // This ensures that the end-user IP address is never identified as a CloudFlare IP. 
+    $reverse_proxy_header = variable_get('reverse_proxy_header', 'HTTP_X_FORWARDED_FOR');
+    if (!empty($_SERVER[$reverse_proxy_header])) {
+      $forwarded = explode(',', $_SERVER[$reverse_proxy_header]);
+      $forwarded = array_map('trim', $forwarded);
+      $good_ips = array();
+      foreach ($forwarded as $ip) {
+        if (!cloudflare_ip_address_in_range($ip)) {
+          $good_ips[] = $ip;
+        }
+      }
+      $_SERVER[$reverse_proxy_header] = implode(',', $good_ips);
+    }
+  }
+  drupal_static_reset('ip_address');
+
+  // Properly flag the request as a HTTPS request if CloudFlare's flexible SSL is being used
+  if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' && empty($_SERVER['HTTPS'])) {
+    if ($trusted || in_array($connecting_ip, $reverse_proxy_addresses) || cloudflare_ip_address_in_range($connecting_ip, cloudflare_ip_ranges())) {
+      global $cloudflare_ssl_handling;
+      if ($cloudflare_ssl_handling) {
+        $_SERVER['HTTPS'] = 'on';
+        $conf['https'] = TRUE;
+        if (substr($GLOBALS['base_url'], 0, 7) === "http://") {
+          $GLOBALS['base_url'] = 'https://' . substr($GLOBALS['base_url'], 7);
+          $GLOBALS['base_secure_url'] = $GLOBALS['base_url'];
+          $GLOBALS['is_https'] = TRUE;
+        }
+      }
+      else {
+        $parts = pathinfo(drupal_get_filename('module', 'cloudflare'));
+        $include = 'require_once("' . $parts['dirname'] . '/cloudflare.https.inc");';
+        drupal_set_message("CloudFlare SSL Error: CloudFlare HTTPS handling is not properly enabled. Add the following to your settings.php:<br/> <code style='font-family: monospace;'>$include</code>", 'error');
+      }
+    }
+  }
+
+  // Check for AlwaysOnline spider and set appropriate cache-control headers
+  if (!empty($_SERVER['HTTP_USER_AGENT'])  && $_SERVER['HTTP_USER_AGENT'] == CLOUDFLARE_ALWAYSONLINE_USER_AGENT) {
+    drupal_add_http_header('Cache-Control', 'public, max-age=86400');
+    drupal_add_http_header('Vary', 'User-Agent');
+  }
+}
+
+/**
+ * Implements hook_enable()
+ */
+function cloudflare_enable() {
+    db_update('system')
+    ->fields(array('weight' => -500))
+    ->condition('type', 'module')
+    ->condition('name', 'cloudflare')
+    ->execute();
+}
+
+/**
+* Implementation of hook_menu().
+*/
+function cloudflare_menu() {
+  $items['admin/config/system/cloudflare'] = array(
+    'title' => 'Cloudflare',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('cloudflare_admin'),
+    'access arguments' => array('administer cloudflare'),
+    'description' => t('Configure the Cloudflare settings.')
+  );
+  return $items;
+}
+
+/**
+* cloudflare_menu() page callback function.
+*/
+function cloudflare_admin() {
+  $form = array();
+
+  $form['ip_address_handling'] = array(
+    '#type' => 'fieldset', 
+    '#title' => 'IP Address Detection', 
+    '#description' => t('<p>By default the X-Forwarded-For header is used determine the end-users IP address (default option). However, given the need to check forwarded IPs against a long list of trusted cloudflare IP ranges, this can increase load time and resource use on the server. </p>
+
+      <p>You can also choose to use CF-Connecting-IP and continue to verify the header against trusted IP addresses (second option). </p>
+
+      <p>The best option is to use CF-Connecting-IP and trust that the header is coming from a CloudFlare IP address (third option). While this option is the best in terms of resource usage and load time, for it to be secure your server either needs to only be accessible from CloudFlare, or have an upstream reverse proxy (such as varnish) that will verify that the request is coming from cloudflare if this header is present.</p>'), 
+  );
+
+  $form['ip_address_handling']['cloudflare_cf_connecting_ip'] = array(
+    '#type' => 'radios', 
+    '#options' => array(
+      '0' => t('Use X-Forwarded-For header'),
+      'verify' => t('Use CF-Connecting-IP header, but verify the header'),
+      'trust' => t('Use CF-Connecting-IP header, and trust the header'), 
+    ),
+    '#default_value' => variable_get('cloudflare_cf_connecting_ip', '0'),
+  );
+
+  $form['cloudflare_api_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('E-mail address'),
+    '#description' => t('Email address for your Cloudflare account.  You can find it on the ').l(t('Account Tab'), 'https://www.cloudflare.com/my-account.html'),
+    '#default_value' => variable_get('cloudflare_api_email', ''),
+  );
+  $form['cloudflare_api_key'] = array(
+    '#type' => 'textfield',
+    '#title' => t('API key'),
+    '#description' => t('API key for your Cloudflare account.  You can find it on the ').l(t('Account Tab'), 'https://www.cloudflare.com/my-account.html'),
+    '#default_value' => variable_get('cloudflare_api_key', ''),
+  );
+  return system_settings_form($form);
+}
+
+
+function cloudflare_admin_submit($form, &$form_state) {
+  $form_values = $form_state['values'];
+  variable_set('cloudflare_cf_connecting_ip', $form_values['cloudflare_cf_connecting_ip']);
+  variable_set('cloudflare_api_email', $form_values['api_email']);
+  variable_set('cloudflare_api_key', $form_values['api_key']);
+}
+
+
+/**
+* Get a list of cloudflare IP Ranges
+*/
+function cloudflare_ip_ranges() {
+  if ($cache = cache_get('cloudflare_ip_ranges')) {
+    return $cache->data;
+  }
+  else {
+    $ip_blocks = file_get_contents(CLOUDFLARE_URL_IPV4_RANGE);
+    if ($ip_blocks === FALSE) {
+      watchdog('cloudflare', 'Unable to fetch IP address information from cloudflare. Until resolved, IP address detection is non-functional.', NULL, WATCHDOG_ALERT);
+      return FALSE;
+    }
+    $cloudflare_ips = explode("\n", $ip_blocks);
+    $cloudflare_ips = array_filter($cloudflare_ips);
+    $cloudflare_ips = array_map('trim', $cloudflare_ips);
+
+    cache_set('cloudflare_ip_ranges', $cloudflare_ips);
+    return $cloudflare_ips;
+  }
+}
+
+/**
+* Given an IP range like 8.8.8.0/24, check to see if an IP address is in it
+*/
+function cloudflare_ip_address_in_range($checkip, $range = FALSE) {
+  if ($range === FALSE) {
+    $range = cloudflare_ip_ranges();
+    if ($range === FALSE) { // unable to determine cloudflare IP ranges
+      return FALSE;
+    }
+  }
+  if (is_array($range)) {
+    foreach ($range as $ip_range) {
+      if (!empty($ip_range) && cloudflare_ip_address_in_range($checkip, $ip_range)) {
+        return TRUE;
+      }
+    }
+    return FALSE;
+  }
+
+  @list($ip, $len) = explode('/', $range);
+
+  if (($min = ip2long($ip)) !== false && !is_null($len)) {
+    $clong = ip2long($checkip);
+    $max = ($min | (1<<(32-$len))-1);
+    if ($clong > $min && $clong < $max) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+}
+
