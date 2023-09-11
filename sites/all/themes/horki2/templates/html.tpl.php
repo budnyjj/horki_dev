@@ -48,9 +48,6 @@
  
   gtag('config', 'G-HVY7K8R99X');
   gtag('config', 'G-HF2Q7NE3TZ');
-  gtag('config', 'UA-17432924-1');
-  gtag('config', 'UA-17432924-4');
-  gtag('config', 'UA-126033838-1');
 </script>
 
 <!-- Yandex.Metrika -->
