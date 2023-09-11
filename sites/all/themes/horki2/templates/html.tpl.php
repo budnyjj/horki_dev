@@ -13,7 +13,6 @@
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/instagram.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/ok.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/vk.svg">
-<link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/twitter.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/facebook.svg">
 <link rel="preload" as="image" type="image/svg+xml" href="/sites/default/files/icons/social/mail.svg">
 
