@@ -86,6 +86,9 @@ function content_type_news_strongarm() {
       ),
     ),
     'view_modes' => array(
+      'amp' => array(
+        'custom_settings' => TRUE,
+      ),
       'colorbox' => array(
         'custom_settings' => FALSE,
       ),

@@ -11,49 +11,6 @@
 function content_type_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-news-field_add_this'.
-  $field_instances['node-news-field_add_this'] = array(
-    'bundle' => 'news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 10,
-    ),
-  );
-
   // Exported field_instance: 'node-news-field_additional_taxonomy'.
   $field_instances['node-news-field_additional_taxonomy'] = array(
     'bundle' => 'news',
@@ -61,6 +18,12 @@ function content_type_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Неабавязковыя тэгі, напрыклад, карупцыя, выбары-2012...',
     'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -120,6 +83,12 @@ function content_type_news_field_default_field_instances() {
 <br>
 Актуальны спіс патрабаванняў: https://support.google.com/news/publisher-center/answer/6204050',
     'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -166,6 +135,12 @@ function content_type_news_field_default_field_instances() {
 <br>
 Актуальны спіс патрабаванняў: https://dzen.ru/help/news/requirements/content.html#content__overall',
     'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'default' => array(
         'label' => 'above',
         'settings' => array(),
@@ -203,6 +178,12 @@ function content_type_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Выкарыстоўваюцца для паказу ў фотаблогу.',
     'display' => array(
+      'amp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'field_slideshow',
@@ -357,6 +338,12 @@ function content_type_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Гэты малюнак будзе паказвацца ў спісе навін',
     'display' => array(
+      'amp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'colorbox',
@@ -569,6 +556,12 @@ function content_type_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Напрыклад, Горкі, Дрыбін, БДСГА...',
     'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -622,6 +615,12 @@ function content_type_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...',
     'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -673,6 +672,13 @@ function content_type_news_field_default_field_instances() {
     'description' => 'Асноўны змест навіны. Каб ўставіць відэа, выкарыстоўвайце код: 
 [VIDEO::http://www.youtube.com/watch?v=someVideoID::normal]',
     'display' => array(
+      'amp' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
@@ -768,6 +774,12 @@ function content_type_news_field_default_field_instances() {
     'deleted' => 0,
     'description' => 'Відэа для стварэння прэв\'ю ў відэаблогу',
     'display' => array(
+      'amp' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'video_embed_field',
@@ -851,7 +863,6 @@ function content_type_news_field_default_field_instances() {
 В них не должны содержаться сообщения неновостного характера: прогнозы погоды, списки и расписания, сообщения блогов и форумов, анонсы предстоящих событий, реклама, стихи, анекдоты, фельетоны, гороскопы, художественные произведения, сообщения-дайджесты («Главное за день», «Итоги недели», «Олимпиада: главные цифры дня», «Что случилось этой ночью») и т. п.
 <br>
 Актуальны спіс патрабаванняў: https://dzen.ru/help/news/requirements/content.html#content__overall');
-  t('Падзяліцца');
   t('Рубрыкі');
   t('Тэкст');
   t('Фоты да блогу');

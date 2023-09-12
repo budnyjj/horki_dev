@@ -12,7 +12,7 @@ function content_type_news_field_group_info() {
   $field_groups = array();
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_actions|node|news|full';
   $field_group->group_name = 'group_actions';
@@ -236,71 +236,12 @@ function content_type_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_share|node|news|full';
-  $field_group->group_name = 'group_share';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'news';
-  $field_group->mode = 'full';
-  $field_group->parent_name = 'group_actions';
-  $field_group->data = array(
-    'children' => array(
-      0 => 'field_add_this',
-    ),
-    'format_settings' => array(
-      'formatter' => 'open',
-      'instance_settings' => array(
-        'classes' => 'group-share',
-        'description' => '',
-        'effect' => 'none',
-        'id' => '',
-        'label_element' => 'h3',
-        'show_label' => '1',
-        'speed' => 'fast',
-      ),
-      'label' => 'Падзяліцца',
-    ),
-    'format_type' => 'div',
-    'label' => 'Падзяліцца',
-    'weight' => '3',
-  );
-  $field_groups['group_share|node|news|full'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_tags|node|news|form';
-  $field_group->group_name = 'group_tags';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'news';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'children' => array(
-      0 => 'group_additional',
-      1 => 'group_places',
-      2 => 'group_rubrics',
-    ),
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(
-        'classes' => ' group-tags field-group-tabs',
-      ),
-    ),
-    'format_type' => 'tabs',
-    'label' => 'Тэгі',
-    'weight' => '3',
-  );
-  $field_groups['group_tags|node|news|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_tags|node|news|full';
   $field_group->group_name = 'group_tags';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'news';
   $field_group->mode = 'full';
-  $field_group->parent_name = 'group_actions';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'children' => array(
       0 => 'field_placement_by_taxonomy',
@@ -332,7 +273,6 @@ function content_type_news_field_group_info() {
   t('Дадатковыя тэгі');
   t('Дзеянні');
   t('Медыя');
-  t('Падзяліцца');
   t('Прэв\'ю');
   t('Рубрыкі');
   t('Тэгі');

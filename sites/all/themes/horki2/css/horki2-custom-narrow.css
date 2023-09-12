@@ -885,10 +885,10 @@ html body.admin-menu .stickynav-active {
 
 .node .group-share {
     width: 50%;
-    margin-right: 0;
 }
 
 .node .group-tags {
+    border-top: 1px solid #DBDBDB; 
     width: 50%;
 }
 
