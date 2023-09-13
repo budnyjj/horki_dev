@@ -11,49 +11,6 @@
 function content_type_local_solution_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-local_solution-field_add_this'.
-  $field_instances['node-local_solution-field_add_this'] = array(
-    'bundle' => 'local_solution',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 3,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 10,
-    ),
-  );
-
   // Exported field_instance: 'node-local_solution-field_documents'.
   $field_instances['node-local_solution-field_documents'] = array(
     'bundle' => 'local_solution',
@@ -169,6 +126,7 @@ function content_type_local_solution_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
@@ -540,7 +498,6 @@ function content_type_local_solution_field_default_field_instances() {
   t('Гэты малюнак будзе паказвацца ў спісе рашэнняў праблем');
   t('Дакументы');
   t('Звязаныя праблемы');
-  t('Падзяліцца');
   t('Прагляд PDF дакумента');
   t('Спіс звязаных праблем');
   t('Тэкст');

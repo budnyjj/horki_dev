@@ -11,54 +11,6 @@
 function content_type_davedka_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-info-field_add_this'.
-  $field_instances['node-info-field_add_this'] = array(
-    'bundle' => 'info',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'odnoklassniki_ru,vk,facebook,twitter,google_plusone_share,email,print,favorites',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-info-field_daviedka_punkt_menu'.
   $field_instances['node-info-field_daviedka_punkt_menu'] = array(
     'bundle' => 'info',
@@ -509,7 +461,6 @@ function content_type_davedka_field_default_field_instances() {
   t('Iлюстрацыя');
   t('Месцы');
   t('Напішыце кароткую назву гэтай старонкі даведкі (як яна павінна адлюстравацца ў ');
-  t('Падзяліцца');
   t('Парадкавы нумар');
   t('Парадкавы нумар артыкула ў агульным спісе.');
   t('Пункт меню для гэтай старонкі');

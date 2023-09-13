@@ -2,24 +2,24 @@
 
 /**
  * @file
- * content_type_news_from_readers.field_group.inc
+ * content_type_old_place.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function content_type_news_from_readers_field_group_info() {
+function content_type_old_place_field_group_info() {
   $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_places|node|news_from_readers|form';
-  $field_group->group_name = 'group_places';
+  $field_group->identifier = 'group_address|node|old_place|form';
+  $field_group->group_name = 'group_address';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'news_from_readers';
+  $field_group->bundle = 'old_place';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_tags';
+  $field_group->parent_name = 'group_placement';
   $field_group->data = array(
     'children' => array(
       0 => 'field_placement_by_taxonomy',
@@ -27,83 +27,86 @@ function content_type_news_from_readers_field_group_info() {
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
-        'classes' => ' group-places field-group-tab',
+        'classes' => 'group-address field-group-tab',
         'description' => '',
         'required_fields' => 1,
       ),
+      'label' => 'Адрас',
     ),
     'format_type' => 'tab',
-    'label' => 'Месцы',
+    'label' => 'Адрас',
     'weight' => '12',
   );
-  $field_groups['group_places|node|news_from_readers|form'] = $field_group;
+  $field_groups['group_address|node|old_place|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_rubrics|node|news_from_readers|form';
-  $field_group->group_name = 'group_rubrics';
+  $field_group->identifier = 'group_place_map|node|old_place|form';
+  $field_group->group_name = 'group_place_map';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'news_from_readers';
+  $field_group->bundle = 'old_place';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_tags';
+  $field_group->parent_name = 'group_placement';
   $field_group->data = array(
     'children' => array(
-      0 => 'field_rubric_by_taxonomy',
+      0 => 'field_place_map',
+      1 => 'field_this_place_on_map',
     ),
     'format_settings' => array(
-      'formatter' => 'closed',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'classes' => ' group-rubrics field-group-tab',
+        'classes' => 'group-place-map field-group-tab',
         'description' => '',
         'required_fields' => 1,
       ),
+      'label' => 'Месца',
     ),
     'format_type' => 'tab',
-    'label' => 'Рубрыкі',
-    'weight' => '13',
+    'label' => 'Месца',
+    'weight' => '12',
   );
-  $field_groups['group_rubrics|node|news_from_readers|form'] = $field_group;
+  $field_groups['group_place_map|node|old_place|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_tags|node|news_from_readers|form';
-  $field_group->group_name = 'group_tags';
+  $field_group->identifier = 'group_placement|node|old_place|form';
+  $field_group->group_name = 'group_placement';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'news_from_readers';
+  $field_group->bundle = 'old_place';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
     'children' => array(
-      0 => 'group_places',
-      1 => 'group_rubrics',
+      0 => 'group_place_map',
+      1 => 'group_address',
     ),
     'format_settings' => array(
-      'formatter' => '',
       'instance_settings' => array(
-        'classes' => ' group-tags field-group-tabs',
+        'classes' => 'group-placement field-group-tabs',
+        'id' => '',
       ),
+      'label' => 'Месца',
     ),
     'format_type' => 'tabs',
-    'label' => 'Тэгі',
-    'weight' => '4',
+    'label' => 'Месца',
+    'weight' => '2',
   );
-  $field_groups['group_tags|node|news_from_readers|form'] = $field_group;
+  $field_groups['group_placement|node|old_place|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_tags|node|news_from_readers|full';
+  $field_group->identifier = 'group_tags|node|old_place|default';
   $field_group->group_name = 'group_tags';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'news_from_readers';
-  $field_group->mode = 'full';
+  $field_group->bundle = 'old_place';
+  $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
     'children' => array(
-      0 => 'field_placement_by_taxonomy',
-      1 => 'field_rubric_by_taxonomy',
+      0 => 'field_old_place_type',
     ),
     'format_settings' => array(
       'formatter' => 'open',
@@ -122,12 +125,12 @@ function content_type_news_from_readers_field_group_info() {
     'label' => 'Тэгі',
     'weight' => '4',
   );
-  $field_groups['group_tags|node|news_from_readers|full'] = $field_group;
+  $field_groups['group_tags|node|old_place|default'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Месцы');
-  t('Рубрыкі');
+  t('Адрас');
+  t('Месца');
   t('Тэгі');
 
   return $field_groups;

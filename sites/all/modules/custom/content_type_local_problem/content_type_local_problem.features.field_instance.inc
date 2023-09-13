@@ -11,49 +11,6 @@
 function content_type_local_problem_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-local_problem-field_add_this'.
-  $field_instances['node-local_problem-field_add_this'] = array(
-    'bundle' => 'local_problem',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 14,
-    ),
-  );
-
   // Exported field_instance: 'node-local_problem-field_address'.
   $field_instances['node-local_problem-field_address'] = array(
     'bundle' => 'local_problem',
@@ -1084,7 +1041,6 @@ function content_type_local_problem_field_default_field_instances() {
   t('Мапа');
   t('Маркер');
   t('Месца');
-  t('Падзяліцца');
   t('Падрабязнае апісанне праблемы.');
   t('Пакіньце ваш email, каб мы маглі з вамі звязацца і напісаць артыкул пра ўказаную вамі праблему або пракансультаваць, як яе можна вырашыць.
 <br>

@@ -102,49 +102,6 @@ function content_type_library_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-library-field_add_this'.
-  $field_instances['node-library-field_add_this'] = array(
-    'bundle' => 'library',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 3,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-library-field_pdf'.
   $field_instances['node-library-field_pdf'] = array(
     'bundle' => 'library',
@@ -434,7 +391,6 @@ function content_type_library_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('PDF');
   t('Апiсанне');
-  t('Падзяліцца');
   t('Прэв\'ю');
   t('Тут можна запампаваць здымак вокладкі. Будзе адлюстроўвацца ў спісе кніг.');
 

@@ -107,49 +107,6 @@ function content_type_company_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-company-field_add_this'.
-  $field_instances['node-company-field_add_this'] = array(
-    'bundle' => 'company',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 12,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 14,
-    ),
-  );
-
   // Exported field_instance: 'node-company-field_address'.
   $field_instances['node-company-field_address'] = array(
     'bundle' => 'company',
@@ -977,7 +934,6 @@ function content_type_company_field_default_field_instances() {
   t('Web-сайт');
   t('Адрас');
   t('Апісанне');
-  t('Падзяліцца');
   t('Парадкавы нумар');
   t('Поўная назва прадпрыемства');
   t('Раздел каталога');

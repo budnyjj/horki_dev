@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the Content type: old place feature.
+ */
+
+include_once 'content_type_old_place.features.inc';

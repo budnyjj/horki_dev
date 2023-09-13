@@ -11,49 +11,6 @@
 function content_type_news_from_readers_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-news_from_readers-field_add_this'.
-  $field_instances['node-news_from_readers-field_add_this'] = array(
-    'bundle' => 'news_from_readers',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'horizontal',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-news_from_readers-field_author'.
   $field_instances['node-news_from_readers-field_author'] = array(
     'bundle' => 'news_from_readers',
@@ -926,7 +883,6 @@ function content_type_news_from_readers_field_default_field_instances() {
   t('Малюнак');
   t('Месцы');
   t('Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...');
-  t('Падзяліцца');
   t('Рубрыкі');
   t('Тэкст');
   t('Фота да тэксту');

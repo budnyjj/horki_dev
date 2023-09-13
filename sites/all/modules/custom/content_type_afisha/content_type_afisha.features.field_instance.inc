@@ -11,49 +11,6 @@
 function content_type_afisha_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-afisha-field_add_this'.
-  $field_instances['node-afisha-field_add_this'] = array(
-    'bundle' => 'afisha',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-afisha-field_additional_taxonomy'.
   $field_instances['node-afisha-field_additional_taxonomy'] = array(
     'bundle' => 'afisha',
@@ -790,7 +747,6 @@ function content_type_afisha_field_default_field_instances() {
   t('Месца');
   t('Напрыклад, людзі, здарэнні, культура, фотаблог, відэаблог...');
   t('Неабавязковыя тэгі, напрыклад, карупцыя, выбары-2012...');
-  t('Падзяліцца');
   t('Рубрыкі');
   t('Тэкст');
   t('Што');

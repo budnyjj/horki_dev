@@ -100,42 +100,6 @@ function content_type_static_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-static-field_add_this'.
-  $field_instances['node-static-field_add_this'] = array(
-    'bundle' => 'static',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(),
-      'type' => 'addthis_button_widget',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-static-field_pdf'.
   $field_instances['node-static-field_pdf'] = array(
     'bundle' => 'static',
@@ -293,7 +257,6 @@ function content_type_static_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('PDF');
   t('Змест');
-  t('Падзяліцца');
   t('Спасылкі');
 
   return $field_instances;

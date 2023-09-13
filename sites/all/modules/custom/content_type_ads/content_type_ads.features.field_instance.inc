@@ -11,51 +11,6 @@
 function content_type_ads_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ads-field_add_this'.
-  $field_instances['node-ads-field_add_this'] = array(
-    'bundle' => 'ads',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_disabled',
-        'weight' => 17,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'addthis_displays',
-        'settings' => array(
-          'buttons_size' => 'addthis_32x32_style',
-          'counter_orientation' => 'vertical',
-          'extra_css' => '',
-          'share_services' => 'viber, odnoklassniki_ru,vk,facebook,twitter,email',
-        ),
-        'type' => 'addthis_basic_toolbox',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_add_this',
-    'label' => 'Падзяліцца',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
-      'type' => 'addthis_button_widget',
-      'weight' => 15,
-    ),
-  );
-
   // Exported field_instance: 'node-ads-field_ads_phone'.
   $field_instances['node-ads-field_ads_phone'] = array(
     'bundle' => 'ads',
@@ -171,7 +126,7 @@ function content_type_ads_field_default_field_instances() {
           'picture_mapping' => 'article',
         ),
         'type' => 'picture',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -596,7 +551,7 @@ function content_type_ads_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -761,7 +716,6 @@ function content_type_ads_field_default_field_instances() {
   t('Вашае імя, прозвішча.');
   t('Кантактнае імя');
   t('Месца размяшчэння абвесткі');
-  t('Падзяліцца');
   t('Падрабязнае апісанне вашага тавару або паслугі. Яно будзе паказвацца на старонцы вашай абвесткі.');
   t('Тып абвесткі');
   t('Тэлефон');
