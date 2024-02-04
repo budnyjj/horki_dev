@@ -10,3 +10,6 @@ sites/*/tmp
 *.swp
 *.swo
 \#*\#
+
+# Ignore CI files
+.gitlab-ci*
