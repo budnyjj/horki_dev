@@ -60,7 +60,7 @@ function addtoany_admin_settings() {
     '#type'          => 'textarea',
     '#title'         => t('Service Buttons HTML code'),
     '#default_value' => variable_get('addtoany_additional_html', ''),
-    '#description'   => t('You can add HTML code to display customized <a href="https://www.addtoany.com/buttons/customize/drupal/standalone_services" target="_blank">standalone service buttons</a> next to each universal sharing button. For example: <br /> <code>&lt;a class=&quot;a2a_button_facebook&quot;&gt;&lt;/a&gt;<br />&lt;a class=&quot;a2a_button_twitter&quot;&gt;&lt;/a&gt;<br />&lt;a class=&quot;a2a_button_pinterest&quot;&gt;&lt;/a&gt;</code>
+    '#description'   => t('You can add HTML code to display customized <a href="https://www.addtoany.com/buttons/customize/drupal/standalone_services" target="_blank">standalone service buttons</a> next to each universal sharing button. For example: <br /> <code>&lt;a class=&quot;a2a_button_facebook&quot;&gt;&lt;/a&gt;<br />&lt;a class=&quot;a2a_button_mastodon&quot;&gt;&lt;/a&gt;<br />&lt;a class=&quot;a2a_button_pinterest&quot;&gt;&lt;/a&gt;</code>
     '),
   );
   $form['addtoany_button_settings']['addtoany_service_button_settings']['addtoany_additional_html_placement'] = array(

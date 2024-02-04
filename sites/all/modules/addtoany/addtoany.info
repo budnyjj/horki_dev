@@ -1,5 +1,5 @@
 name = AddToAny
-description = Share buttons by AddToAny, including the AddToAny universal sharing button, Facebook, Twitter, Pinterest, and over 100 more on the <a href='https://www.addtoany.com/' target='_blank'>AddToAny</a> platform.
+description = Share buttons by AddToAny, including the AddToAny universal sharing button, Facebook, Mastodon, Pinterest, and many more on the <a href='https://www.addtoany.com/' target='_blank'>AddToAny</a> platform.
 core = 7.x
 
 files[] = addtoany.module
@@ -9,8 +9,8 @@ files[] = views/addtoany_handler_field_addtoany_link.inc
 files[] = views/addtoany.views.inc
 configure = admin/config/services/addtoany
 
-; Information added by Drupal.org packaging script on 2023-01-19
-version = "7.x-4.18"
+; Information added by Drupal.org packaging script on 2023-11-01
+version = "7.x-4.19"
 core = "7.x"
 project = "addtoany"
-datestamp = "1674097829"
+datestamp = "1698824179"
