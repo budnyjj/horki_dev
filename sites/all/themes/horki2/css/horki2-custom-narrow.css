@@ -883,11 +883,16 @@ html body.admin-menu .stickynav-active {
     margin: -25px 50px 50px 50px;
 }
 
-.node .group-share {
+.node-ads .group-share,
+.node-afisha .group-share,
+.node-news .group-share,
+.node-news-from-readers .group-share,
+.node-old-place .group-share {
     width: 50%;
 }
 
 .node .group-tags {
+    padding-top: 22px;
     border-top: 1px solid #DBDBDB; 
     width: 50%;
 }
