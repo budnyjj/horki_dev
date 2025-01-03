@@ -109,30 +109,15 @@ function xmlsitemap_image_xmlsitemap_element_alter(array &$element, array $link,
  * @return array
  */
 function _xmlsitemap_image_handle_imagefield(array $image) {
-  $image_attrs = ["image:loc"     => file_create_url($image[ "uri" ])];
-  // fill optional title
-  if (!empty($image[ 'field_file_image_title_text' ])) {
-    $title = $image[ 'field_file_image_title_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ];
-  } elseif (!empty($image[ 'title' ])) {
-    $title = $image[ 'title' ];
-  } else {
-    $title = NULL;
-  }
-  if ($title != NULL) {
-    $image_attrs["image:title"] = $title;
-  }
-  // fill optional caption if it is short enough
-  if (!empty($image[ 'field_file_image_caption_text' ])) {
-    $caption = $image[ 'field_file_image_caption_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ];
-  } elseif (!empty($image[ 'alt' ])) {
-    $caption = $image[ 'alt' ];
-  } else {
-    $caption = NULL;
-  }
-  if ($caption != NULL) {
-    $image_attrs["image:caption"] = _xmlsitemap_image_trim_caption($caption);
-  }
-  return ["image:image" => $image_attrs];
+  $title   = !empty($image[ 'field_file_image_title_text' ]) ? $image[ 'field_file_image_title_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ] : (!empty($image[ 'title' ]) ? $image[ 'title' ] : $image[ 'filename' ]);
+  $caption = !empty($image[ 'field_file_image_caption_text' ]) ? $image[ 'field_file_image_caption_text' ][ LANGUAGE_NONE ][ 0 ][ 'value' ] : (!empty($image[ 'alt' ]) ? $image[ 'alt' ] : $image[ 'filename' ]);
+  return [
+    "image:image" => [
+      "image:loc"     => file_create_url($image[ "uri" ]),
+      "image:title"   => $title,
+      "image:caption" => _xmlsitemap_image_trim_caption($caption),
+    ],
+  ];
 }
 
 /**
