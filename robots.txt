@@ -109,7 +109,7 @@ Disallow: /user/*
 # Disallow hybridauth
 Disallow: /hybridauth
 
-# Disallow pages kept for backward compatibility
+# Disallow old pages kept for backward compatibility
 Disallow: /navina/
 Disallow: /content/
 
@@ -225,9 +225,9 @@ Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 
 # Sitemap settings
-Sitemap: https://horki.info/sitemap.xml
-Allow: /sitemap.xml
-Allow: /sitemap.xml?page=*
+Sitemap: https://horki.info/sitemap-google.xml
+Allow: /sitemap-google.xml
+Allow: /sitemap-google.xml?page=*
 
 # RSS pages
 Allow: /news.xml
