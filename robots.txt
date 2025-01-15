@@ -224,11 +224,6 @@ Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 
-# Sitemap settings
-Sitemap: https://horki.info/sitemap-google.xml
-Allow: /sitemap-google.xml
-Allow: /sitemap-google.xml?page=*
-
 # RSS pages
 Allow: /news.xml
 Allow: /vk.xml
