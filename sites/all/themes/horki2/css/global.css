@@ -530,7 +530,7 @@ ul.tabs li.active a {
 
 /* content banner */
 .block-block-61 {
-    min-height: 120px;
+    min-height: 250px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #DBDBDB;
@@ -553,11 +553,11 @@ ul.tabs li.active a {
 
 /* sidebar banner #2 */
 .block-41 {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .block-41 .block-inner {
-    min-height: 400px;
+    /* min-height: 400px; */
 }
 
 
@@ -1338,7 +1338,7 @@ ul.tabs li.active a {
 }
 
 .block-block-58 {
-    min-height: 120px;
+    min-height: 250px;
     margin-bottom: 20px;
 }
 

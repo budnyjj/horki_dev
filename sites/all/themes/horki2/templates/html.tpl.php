@@ -64,13 +64,7 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/21451765" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 <!-- Google AdSense -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-7674021519504941",
-    enable_page_level_ads: true
-  });
-</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6672990530337148" crossorigin="anonymous"></script>
 
 <!-- Yandex.Direct -->
 <script>window.yaContextCb = window.yaContextCb || []</script>

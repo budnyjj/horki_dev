@@ -73,7 +73,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -202,7 +202,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['published_at']['date_format'] = 'custom';
   $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'r';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -378,7 +378,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['published_at']['date_format'] = 'custom';
   $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'r';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -625,7 +625,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['changed_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['changed_1']['date_format'] = 'medium';
   $handler->display->display_options['fields']['changed_1']['second_date_format'] = 'long';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -698,7 +698,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -849,7 +849,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['published_at']['date_format'] = 'custom';
   $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'r';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1026,7 +1026,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['published_at']['date_format'] = 'custom';
   $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'r';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1073,7 +1073,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['field_text_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1232,7 +1232,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'r';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1281,7 +1281,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1422,7 +1422,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1559,7 +1559,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1629,7 +1629,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1781,7 +1781,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -1851,7 +1851,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2021,7 +2021,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -2091,7 +2091,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2261,7 +2261,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -2331,7 +2331,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2494,7 +2494,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -2565,7 +2565,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2679,7 +2679,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2816,7 +2816,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -2886,7 +2886,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2926,7 +2926,8 @@ function views_rss_custom_feeds_views_default_views() {
   $handler = $view->new_display('feed', 'Навіны: папулярныя', 'feed_turbo_news_popular');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'horki.info: папулярныя матэрыялы';
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
   $handler->display->display_options['style_options']['namespaces'] = array(
@@ -3023,7 +3024,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -3088,12 +3089,17 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
+  $handler->display->display_options['sorts']['published_at']['granularity'] = 'year';
+  /* Sort criterion: Node statistics: Recent count */
+  $handler->display->display_options['sorts']['recentcount']['id'] = 'recentcount';
+  $handler->display->display_options['sorts']['recentcount']['table'] = 'jstats_node';
+  $handler->display->display_options['sorts']['recentcount']['field'] = 'recentcount';
+  $handler->display->display_options['sorts']['recentcount']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3116,12 +3122,14 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['published_at']['operator'] = '<';
   $handler->display->display_options['filters']['published_at']['value']['value'] = '-30 days';
   $handler->display->display_options['filters']['published_at']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['published_at']['group'] = 1;
   /* Filter criterion: Node statistics: Recent count */
   $handler->display->display_options['filters']['recentcount']['id'] = 'recentcount';
   $handler->display->display_options['filters']['recentcount']['table'] = 'jstats_node';
   $handler->display->display_options['filters']['recentcount']['field'] = 'recentcount';
-  $handler->display->display_options['filters']['recentcount']['operator'] = '>=';
-  $handler->display->display_options['filters']['recentcount']['value']['value'] = '4000';
+  $handler->display->display_options['filters']['recentcount']['operator'] = '>';
+  $handler->display->display_options['filters']['recentcount']['value']['value'] = '10000';
+  $handler->display->display_options['filters']['recentcount']['group'] = 1;
   /* Filter criterion: Змест: Дадатковыя тэгі (field_additional_taxonomy) */
   $handler->display->display_options['filters']['field_additional_taxonomy_tid']['id'] = 'field_additional_taxonomy_tid';
   $handler->display->display_options['filters']['field_additional_taxonomy_tid']['table'] = 'field_data_field_additional_taxonomy';
@@ -3130,6 +3138,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['filters']['field_additional_taxonomy_tid']['value'] = array(
     174 => '174',
   );
+  $handler->display->display_options['filters']['field_additional_taxonomy_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_additional_taxonomy_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_additional_taxonomy_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['path'] = 'turbo/news/popular.xml';
@@ -3236,7 +3245,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -3306,7 +3315,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3432,7 +3441,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Поле: Змест: Шлях */
+  /* Поле: Змест: Сцежка */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
@@ -3485,7 +3494,7 @@ function views_rss_custom_feeds_views_default_views() {
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Змест: Published status */
+  /* Filter criterion: Змест: Статус публікацыі */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
